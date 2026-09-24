@@ -16,7 +16,7 @@ AMA website copy should focus on corporate capabilities, initiatives, delivery m
 
 ## Major Dream Williams personal website
 
-The personal website is the home for Major’s broader public identity and body of work, including:
+The personal website at [majordreamwilliams.com](https://majordreamwilliams.com) is the home for Major’s broader public identity and body of work, including:
 
 - Personal journey, philosophy, and doctrine
 - Books and writing
@@ -24,13 +24,13 @@ The personal website is the home for Major’s broader public identity and body 
 - A founder narrative that spans multiple ventures
 - Links to AMA Solutions, MAIM, and other initiatives
 
-The domain and launch status are not yet recorded here. Keep any link as a placeholder until Major provides the exact URL.
+Personal website: [majordreamwilliams.com](https://majordreamwilliams.com). The domain is active; site deployment and DNS routing are not yet verified.
 
 ## Major AI Mindset (MAIM)
 
-MAIM is the education-focused platform for helping people build confidence, literacy, and practical skill with AI. Keep its curriculum, learning resources, community, and educational calls to action on the MAIM site.
+MAIM is the education-focused platform at [majoraimindset.com](https://majoraimindset.com) for helping people build confidence, literacy, and practical skill with AI. Keep its curriculum, learning resources, community, and educational calls to action on the MAIM site.
 
-The AMA site may identify MAIM as a related initiative in a small “Ecosystem” or “Related work” area if useful, but should route education visitors to MAIM rather than reproduce its content.
+MAIM’s domain is [majoraimindset.com](https://majoraimindset.com). The domain is active; site deployment and DNS routing are not yet verified. The AMA site may identify MAIM as a related initiative in a small “Ecosystem” or “Related work” area if useful, but should route education visitors to MAIM rather than reproduce its content.
 
 ## Founder presence on AMA
 
