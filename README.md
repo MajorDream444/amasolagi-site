@@ -11,6 +11,7 @@ This repository is the canonical home for website code, approved website copy, d
 1. [Project brief](docs/PROJECT-BRIEF.md)
 2. [Site map](docs/SITE-MAP.md)
 3. [Claude handoff](docs/CLAUDE-HANDOFF.md)
+4. [Cowork setup and first build prompt](docs/COWORK-STARTER.md)
 
 ## Company and product story
 
@@ -37,4 +38,4 @@ Do not imply that all 144 AGInts, Mobs, workflows, products, or integrations are
 
 ## Current implementation status
 
-Project documentation is initialized. Website framework, visual design, and application code have not yet been selected or approved.
+Project documentation is initialized. Use [the Cowork starter](docs/COWORK-STARTER.md) to begin implementation; the framework is intentionally left for the builder to select after inspecting the repository.
