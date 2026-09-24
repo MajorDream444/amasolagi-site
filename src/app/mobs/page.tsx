@@ -10,78 +10,18 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const mobs = [
-  {
-    id: "01", name: "Strategy Mob",
-    domain: "Strategy & Planning",
-    description: "Positioning, market research, competitive intelligence, roadmapping, and strategic advisory.",
-    positions: ["Chief Strategist", "Market Analyst", "Competitive Intelligence", "Roadmap Lead", "Research Coord.", "Scenario Planner", "OKR Facilitator", "Stakeholder Liaison", "Strategic Writer", "Workshop Lead", "Data Strategist", "Exec Communicator"],
-  },
-  {
-    id: "02", name: "Brand Mob",
-    domain: "Brand & Identity",
-    description: "Visual identity systems, brand guidelines, naming, logo development, and brand governance.",
-    positions: ["Brand Director", "Identity Designer", "Visual Systems Lead", "Naming Strategist", "Brand Copywriter", "Guidelines Architect", "Color/Type Specialist", "Asset Manager", "Brand Researcher", "Rollout Coordinator", "Brand QA", "Presentation Designer"],
-  },
-  {
-    id: "03", name: "Content Mob",
-    domain: "Content & Editorial",
-    description: "Long-form writing, content strategy, editorial calendars, ghostwriting, and content systems.",
-    positions: ["Editorial Director", "Content Strategist", "Lead Writer", "SEO Specialist", "Ghostwriter", "Editor", "Content Ops Lead", "Social Copywriter", "Newsletter Lead", "Thought Leadership", "Transcript Specialist", "Content Analyst"],
-  },
-  {
-    id: "04", name: "Media Mob",
-    domain: "Video & Audio",
-    description: "Video production, podcast production, audio engineering, post-production, and multimedia.",
-    positions: ["Media Director", "Video Producer", "Cinematographer", "Audio Engineer", "Editor", "Motion Designer", "Script Writer", "Podcast Lead", "Thumbnail Designer", "Distribution Coord.", "Caption Specialist", "Media Analyst"],
-  },
-  {
-    id: "05", name: "Web Mob",
-    domain: "Web & Frontend",
-    description: "Website development, landing pages, web apps, performance optimization, and CMS.",
-    positions: ["Web Lead", "Frontend Engineer", "UI Designer", "CMS Specialist", "Performance Engineer", "QA Engineer", "Accessibility Lead", "SEO-Tech Specialist", "Animation Lead", "Backend Integrator", "Analytics Engineer", "DevOps Coord."],
-  },
-  {
-    id: "06", name: "Data Mob",
-    domain: "Data & Analytics",
-    description: "Data pipelines, reporting dashboards, analytics strategy, and business intelligence.",
-    positions: ["Data Director", "Data Engineer", "BI Developer", "Analyst", "Dashboard Designer", "ETL Specialist", "SQL Expert", "Metrics Architect", "Data QA", "Visualization Lead", "Insights Communicator", "Data Governance"],
-  },
-  {
-    id: "07", name: "Ops Mob",
-    domain: "Operations & Automation",
-    description: "Workflow automation, process documentation, SOP development, and operational tooling.",
-    positions: ["Ops Director", "Process Designer", "Automation Engineer", "SOP Writer", "Tool Evaluator", "Integration Specialist", "Project Coordinator", "Change Manager", "Quality Systems Lead", "Workflow Analyst", "Vendor Liaison", "Ops Trainer"],
-  },
-  {
-    id: "08", name: "Finance Mob",
-    domain: "Finance & Treasury",
-    description: "Financial modeling, treasury management, budgeting, forecasting, and cap table work.",
-    positions: ["CFO-in-Residence", "Financial Modeler", "Treasury Lead", "Budget Analyst", "Cap Table Specialist", "Forecast Engineer", "Accounting Coord.", "Grant Researcher", "Investor Reporting", "Compliance Monitor", "Payroll Coordinator", "Financial Writer"],
-  },
-  {
-    id: "09", name: "Legal Mob",
-    domain: "Legal & Compliance",
-    description: "Contract preparation, compliance monitoring, entity governance, and legal documentation.",
-    positions: ["Legal Director", "Contract Drafter", "Compliance Analyst", "Entity Governance Lead", "IP Coordinator", "Policy Writer", "Regulatory Monitor", "Legal Researcher", "NDA Specialist", "Document Manager", "Risk Analyst", "Legal Comms"],
-  },
-  {
-    id: "10", name: "Commerce Mob",
-    domain: "Commerce & Revenue",
-    description: "E-commerce operations, marketplace management, sales workflows, and revenue systems.",
-    positions: ["Commerce Director", "E-comm Engineer", "Marketplace Lead", "Product Lister", "Pricing Strategist", "Sales Ops Lead", "CRM Manager", "Order Fulfillment", "Returns Manager", "Affiliate Coord.", "Revenue Analyst", "Commerce Writer"],
-  },
-  {
-    id: "11", name: "Culture Mob",
-    domain: "Community & Culture",
-    description: "Community building, events coordination, internal culture programs, and culture comms.",
-    positions: ["Culture Director", "Community Manager", "Events Coordinator", "Culture Writer", "DEI Facilitator", "Internal Comms Lead", "Ambassador Program", "Onboarding Designer", "Recognition Lead", "Pulse Surveyor", "Culture Analyst", "Engagement Specialist"],
-  },
-  {
-    id: "12", name: "Intelligence Mob",
-    domain: "Research & Intelligence",
-    description: "Deep research, competitive monitoring, knowledge management, and intelligence synthesis.",
-    positions: ["Intelligence Director", "Research Lead", "Competitive Monitor", "Trend Analyst", "Knowledge Architect", "Literature Reviewer", "Source Curator", "Report Writer", "Synthesis Specialist", "Briefing Coordinator", "Intel QA", "Distribution Lead"],
-  },
+  { id: "01", name: "Avant-Garde Mob", domain: "Innovation & Foresight", description: "Scans emerging technologies and industry shifts, then develops and evaluates future-facing ideas.", tools: ["Future_Scanner", "Innovation_Hub", "Risk_Visionary"] },
+  { id: "02", name: "Artisans Mob", domain: "Data Craft & Insight", description: "Refines complex information and shapes precise, understandable insights from raw data.", tools: ["Data_Refiner", "Insight_Sculptor", "Trend_Artisan"] },
+  { id: "03", name: "Visionaries Mob", domain: "Strategic Foresight", description: "Maps long-term direction, explores possible futures, and forecasts the impact of decisions.", tools: ["Horizon_Planner", "Possibility_Generator", "Impact_Forecaster"] },
+  { id: "04", name: "Innovators Mob", domain: "Creative Technology", description: "Turns promising concepts into scalable solutions and explores new product and market opportunities.", tools: ["Concept_Builder", "Creative_Engine", "Market_Explorer"] },
+  { id: "05", name: "Maestros Mob", domain: "Orchestration & Systems", description: "Connects data and workflows so complex systems operate as a coordinated whole.", tools: ["Harmony_Analyzer", "Flow_Sync", "Data_Orchestrator"] },
+  { id: "06", name: "Revolutionaries Mob", domain: "Transformative Change", description: "Challenges inherited processes and develops bold approaches to meaningful change.", tools: ["Change_Catalyst", "Idea_Shaker", "Trend_Rebel"] },
+  { id: "07", name: "Luminaries Mob", domain: "Mentorship & Legacy", description: "Supports leadership growth, mentorship, and thoughtful succession planning.", tools: ["Mentor_Matrix", "Legacy_Builder", "Visionary_Guide"] },
+  { id: "08", name: "Vanguards Mob", domain: "Security & Responsible AI", description: "Focuses on digital protection, compliance awareness, and oversight of AI-enabled systems.", tools: ["Digital_Fortress", "Compliance_Guard", "AI_Watchtower"] },
+  { id: "09", name: "Provocateurs Mob", domain: "Bold Campaigns & Engagement", description: "Creates boundary-pushing campaigns designed to challenge perspectives and connect with audiences.", tools: ["Disrupt_Media", "Impact_Amplifier", "Engage_Booster"] },
+  { id: "10", name: "Dreamweavers Mob", domain: "Storytelling & Experience", description: "Develops imaginative brand stories and interactive experiences that build emotional connection.", tools: ["Imagination_Vault", "Interactive_Narrator", "Inspire_Generator"] },
+  { id: "11", name: "Guardians Mob", domain: "Trust & Reputation", description: "Helps organizations monitor reputation, prepare for crises, and strengthen transparent practices.", tools: ["Reputation_Watch", "Crisis_Control", "Trust_Sentinel"] },
+  { id: "12", name: "Strategists Mob", domain: "Planning & Growth", description: "Builds practical blueprints, improves operational efficiency, and identifies paths for growth.", tools: ["Blueprint_Maker", "Efficiency_Tuner", "Growth_Compass"] },
 ];
 
 export default function MobsPage() {
@@ -126,7 +66,7 @@ export default function MobsPage() {
             }}
           >
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--border-light)", display: "inline-block" }} />
-            144 designed positions · Active roster verified separately
+            144 planned AGINT positions · Active roster verified separately
           </p>
         </div>
       </section>
@@ -135,7 +75,7 @@ export default function MobsPage() {
       <section className="section">
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {mobs.map(({ id, name, domain, description, positions }) => (
+            {mobs.map(({ id, name, domain, description, tools }) => (
               <div
                 key={id}
                 className="mob-card"
@@ -184,15 +124,15 @@ export default function MobsPage() {
                       {description}
                     </p>
 
-                    {/* Positions */}
+                    {/* Illustrative tool concepts */}
                     <div>
                       <p className="label-mono" style={{ color: "var(--text-dim)", margin: "0 0 10px" }}>
-                        12 Designed Positions
+                        Illustrative tool concepts
                       </p>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                        {positions.map((pos) => (
+                        {tools.map((tool) => (
                           <span
-                            key={pos}
+                            key={tool}
                             style={{
                               fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
                               fontSize: 11,
@@ -203,7 +143,7 @@ export default function MobsPage() {
                               padding: "3px 8px",
                             }}
                           >
-                            {pos}
+                            {tool}
                           </span>
                         ))}
                       </div>
@@ -213,6 +153,9 @@ export default function MobsPage() {
               </div>
             ))}
           </div>
+          <p className="body-mono" style={{ color: "var(--text-dim)", fontSize: 12, marginTop: 20 }}>
+            Tool names describe concepts from the AMA planning materials; they do not imply that each tool is currently deployed.
+          </p>
         </div>
       </section>
 
