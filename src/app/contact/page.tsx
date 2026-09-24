@@ -104,6 +104,31 @@ export default function ContactPage() {
                   borderRadius: 16,
                 }}
               >
+                <p className="label-mono" style={{ color: "var(--gold)", margin: "0 0 12px" }}>
+                  Email AMA Solutions
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: "0 0 8px" }}>
+                  General inquiries: {" "}
+                  <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    info@amasolagi.com
+                  </a>
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
+                  Direct contact: {" "}
+                  <a href="mailto:major@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    major@amasolagi.com
+                  </a>
+                </p>
+              </div>
+
+              <div
+                style={{
+                  padding: "20px 24px",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 16,
+                }}
+              >
                 <p className="label-mono" style={{ color: "var(--text-dim)", margin: "0 0 8px" }}>
                   Response
                 </p>

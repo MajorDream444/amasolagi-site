@@ -144,7 +144,11 @@ export default function ContactForm() {
       </p>
 
       <p className="body-mono" style={{ color: "var(--text-dim)", fontSize: 13, margin: 0 }}>
-        The contact form is not connected yet. Please check back soon; submitted details are not sent or stored.
+        The contact form is not connected yet; submitted details are not sent or stored. Email us at{" "}
+        <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+          info@amasolagi.com
+        </a>
+        .
       </p>
     </form>
   );
