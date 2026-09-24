@@ -408,7 +408,7 @@ export default function Home() {
             Ready to start a conversation?
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "2rem" }}>
-            Tell us what you're building. We'll help you find the right path.
+            Tell us what you’re building. We’ll help you find the right path.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link

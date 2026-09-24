@@ -228,7 +228,7 @@ export default function ContactPage() {
             className="max-w-xl text-lg"
             style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
           >
-            Every conversation at AMA starts with a human scoping call. Tell us what you're
+            Every conversation at AMA starts with a human scoping call. Tell us what you’re
             working on and where you see the fit.
           </p>
         </div>

@@ -243,7 +243,7 @@ export default function MobsPage() {
             className="max-w-2xl text-lg mb-4"
             style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
           >
-            AMA's delivery network is organized into 12 specialized Art Mob teams — each with a
+            AMA’s delivery network is organized into 12 specialized Art Mob teams — each with a
             distinct capability focus, campus district character, and toolset concept. The design
             envisions 144 AGINT positions across the 12 Mobs.
           </p>

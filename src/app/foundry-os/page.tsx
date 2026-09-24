@@ -134,18 +134,18 @@ export default function FoundryOSPage() {
                 What Foundry OS is designed to do
               </h2>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
-                Agent-enabled work doesn't run itself. It requires coordination: keeping context
+                Agent-enabled work doesn’t run itself. It requires coordination: keeping context
                 shared, routing work to the right team, triggering review at the right point, and
                 ensuring that accountability stays attached to outcomes.
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
-                Foundry OS is AMA's effort to formalize the operating model behind the Mob network
+                Foundry OS is AMA’s effort to formalize the operating model behind the Mob network
                 into a system — one that can be reliably repeated across engagements and, longer-term,
                 made available to other organizations doing similar work.
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }}>
                 It is not a product you can use today. It is the modular structure that will make
-                AMA's work more consistent as the network scales, and a longer-term licensing goal
+                AMA’s work more consistent as the network scales, and a longer-term licensing goal
                 for organizations that want to run agent-enabled operations with the same level of
                 structure and human accountability.
               </p>
@@ -244,7 +244,7 @@ export default function FoundryOSPage() {
             Foundry OS and the 12 Mobs
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
-            Foundry OS is not a separate product from AMA's delivery network — it's the
+            Foundry OS is not a separate product from AMA’s delivery network — it’s the
             formalization of how that network operates. As the 12 Art Mob teams do client work,
             the patterns that work are captured and formalized into the OS.
           </p>
@@ -288,7 +288,7 @@ export default function FoundryOSPage() {
             Interested in Foundry OS for your organization?
           </h2>
           <p className="mb-6" style={{ color: "var(--text-muted)" }}>
-            If you're thinking about how to structure agent-enabled operations at scale, we'd
+            If you’re thinking about how to structure agent-enabled operations at scale, we’d
             like to hear from you. Foundry OS licensing is a future goal — not a current offer.
           </p>
           <Link

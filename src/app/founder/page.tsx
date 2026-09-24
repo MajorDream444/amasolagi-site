@@ -37,7 +37,7 @@ export default function FounderPage() {
             style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
           >
             Founder and chief architect of AMA Solutions Corp. This page is a company-relevant
-            introduction — for Major's broader work, writing, and personal journey, visit{" "}
+            introduction — for Major’s broader work, writing, and personal journey, visit{" "}
             <span style={{ color: "var(--text-dim)" }}>
               majordreamwilliams.com{" "}
               <span style={{ fontSize: "0.75rem" }}>(verify before visiting)</span>
@@ -87,7 +87,7 @@ export default function FounderPage() {
               >
                 <p>
                   Major Dream Williams built AMA Solutions Corp around a specific conviction: that
-                  agent-enabled work isn't just about efficiency — it's about ownership. Too often,
+                  agent-enabled work isn’t just about efficiency — it’s about ownership. Too often,
                   the tools and systems that could let ambitious people build lasting value are
                   locked behind institutions that extract more than they return.
                 </p>
@@ -105,7 +105,7 @@ export default function FounderPage() {
                 <p>
                   AMA Solutions Corp is a Delaware C corporation — the legal and financial
                   structure is real. The delivery network is in development. The conviction
-                  behind it has been tested through Major's prior work across athletics,
+                  behind it has been tested through Major’s prior work across athletics,
                   community building, and technology, and it informs every design decision in
                   the company.
                 </p>
@@ -133,11 +133,11 @@ export default function FounderPage() {
             className="font-bold text-xl mb-6"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Major's other work is intentionally separate from AMA
+            Major’s other work is intentionally separate from AMA
           </h2>
 
           <p className="max-w-2xl mb-8" style={{ color: "var(--text-muted)", lineHeight: "1.8" }}>
-            Major's broader journey, doctrine, books, and cross-venture thinking live at
+            Major’s broader journey, doctrine, books, and cross-venture thinking live at
             majordreamwilliams.com. AI education and curriculum belong to Major AI Mindset.
             This site is the AMA corporate presence — client relationships, investment conversations,
             partnerships, and delivery. The brands are kept distinct deliberately.

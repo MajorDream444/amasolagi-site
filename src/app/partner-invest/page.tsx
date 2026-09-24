@@ -92,18 +92,18 @@ export default function PartnerInvestPage() {
               </h2>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
                 AMA Solutions Corp is interested in strategic partnerships that extend the
-                network's reach, deepen capability in specific verticals, or create long-term
+                network’s reach, deepen capability in specific verticals, or create long-term
                 collaboration around the kind of work our Mobs are built to do.
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
-                We're looking for partners who understand that agent-enabled work still requires
+                We’re looking for partners who understand that agent-enabled work still requires
                 human accountability — and who want to build something that lasts, not just scale
                 fast.
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-8">
-                If you're working in an area where one or more of the 12 Mobs is relevant — or if
-                you see a structural fit between what you're building and AMA's network — reach out.
-                We'll have a conversation.
+                If you’re working in an area where one or more of the 12 Mobs is relevant — or if
+                you see a structural fit between what you’re building and AMA’s network — reach out.
+                We’ll have a conversation.
               </p>
               <Link
                 href="/contact?intent=partner"
@@ -119,7 +119,7 @@ export default function PartnerInvestPage() {
                 className="text-xs font-semibold tracking-widest uppercase"
                 style={{ color: "var(--text-dim)" }}
               >
-                What we're looking for in a partner
+                What we’re looking for in a partner
               </p>
               {[
                 {
@@ -206,13 +206,13 @@ export default function PartnerInvestPage() {
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
                 The core thesis: agentic delivery can scale without sacrificing accountability.
-                The 12 Art Mob structure, HAMAL's coordination layer, and Foundry OS in
+                The 12 Art Mob structure, HAMAL’s coordination layer, and Foundry OS in
                 development are all oriented around building that at scale. The investment case
                 rests on whether you believe that thesis and that AMA can execute it.
               </p>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-8">
                 If you want to understand more — the structure, the development stage, the
-                direction — reach out. We'll have a direct conversation.
+                direction — reach out. We’ll have a direct conversation.
               </p>
               <Link
                 href="/contact?intent=invest"
@@ -228,7 +228,7 @@ export default function PartnerInvestPage() {
                 className="text-xs font-semibold tracking-widest uppercase"
                 style={{ color: "var(--text-dim)" }}
               >
-                What's verified today
+                What’s verified today
               </p>
               {[
                 {
@@ -295,8 +295,8 @@ export default function PartnerInvestPage() {
             All conversations start the same way
           </h2>
           <p className="mb-6" style={{ color: "var(--text-muted)" }}>
-            Whether you're interested in a partnership or exploring investment, the path is the
-            same: reach out, and we'll have a direct conversation.
+            Whether you’re interested in a partnership or exploring investment, the path is the
+            same: reach out, and we’ll have a direct conversation.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
