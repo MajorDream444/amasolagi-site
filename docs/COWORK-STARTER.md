@@ -7,6 +7,8 @@ Use the short **Project description** below in Cowork’s description field. Pas
 ```text
 Build the public website for AMA Solutions Corp in this GitHub repository: https://github.com/MajorDream444/amasolagi-site
 
+Associated Vercel project dashboard: https://vercel.com/hamal-agi/amasolagi-site. This link alone does not verify a successful deployment or production domain assignment.
+
 AMA Solutions Corp is the company, client-facing commercial entity, and intended investment vehicle. The site is for strategic partners and investors, while also giving prospective clients a clear path to discuss work.
 
 Core model: HAMAL is the coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux. The 12 Art Mob teams are the client-facing delivery units; the design envisions 144 AGInts across 12 Mobs, with 12 designed positions per Mob. Foundry OS is an operating system in development, intended to make agent-enabled work modular and eventually licensable.
