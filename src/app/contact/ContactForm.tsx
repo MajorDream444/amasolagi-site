@@ -2,10 +2,7 @@
 
 import { useState } from "react";
 
-type FormState = "idle" | "submitting" | "success" | "error";
-
 export default function ContactForm() {
-  const [state, setState] = useState<FormState>("idle");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,14 +15,6 @@ export default function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setState("submitting");
-    // Placeholder — no live endpoint yet
-    await new Promise((r) => setTimeout(r, 900));
-    setState("success");
   }
 
   const inputStyle: React.CSSProperties = {
@@ -53,55 +42,9 @@ export default function ContactForm() {
     marginBottom: 6,
   };
 
-  if (state === "success") {
-    return (
-      <div
-        style={{
-          padding: "40px 32px",
-          background: "var(--surface)",
-          border: "1px solid var(--border)",
-          borderRadius: "var(--radius-card)",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            width: 48,
-            height: 48,
-            borderRadius: "50%",
-            background: "var(--gold-glow)",
-            border: "1px solid var(--gold-dim)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "0 auto 20px",
-          }}
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10l4 4 8-8" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-        <h3
-          style={{
-            fontFamily: "var(--font-display, Inter, sans-serif)",
-            fontSize: 20,
-            fontWeight: 500,
-            color: "var(--text)",
-            margin: "0 0 10px",
-          }}
-        >
-          Message received
-        </h3>
-        <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
-          We read every message personally. We&apos;ll be in touch if there&apos;s a path forward.
-        </p>
-      </div>
-    );
-  }
-
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={(e) => e.preventDefault()}
       style={{
         background: "var(--surface)",
         border: "1px solid var(--border)",
@@ -200,25 +143,9 @@ export default function ContactForm() {
         not a securities offering.
       </p>
 
-      {/* Submit */}
-      <button
-        type="submit"
-        disabled={state === "submitting"}
-        className="btn-primary"
-        style={{
-          width: "100%",
-          opacity: state === "submitting" ? 0.6 : 1,
-          cursor: state === "submitting" ? "not-allowed" : "pointer",
-        }}
-      >
-        {state === "submitting" ? "Sending…" : "Send message"}
-      </button>
-
-      {state === "error" && (
-        <p className="body-mono" style={{ color: "#EF4444", fontSize: 13, margin: 0, textAlign: "center" }}>
-          Something went wrong. Please try again or email us directly.
-        </p>
-      )}
+      <p className="body-mono" style={{ color: "var(--text-dim)", fontSize: 13, margin: 0 }}>
+        The contact form is not connected yet. Please check back soon; submitted details are not sent or stored.
+      </p>
     </form>
   );
 }
