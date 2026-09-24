@@ -31,8 +31,9 @@ The first release should make the company legible before asking visitors to expl
 
 ## Founder
 - Keep this a concise, company-relevant founder section: Major’s role and why his experience connects to AMA.
-- Route the full personal journey, doctrine, books, and cross-venture work to Major’s personal website when its URL is confirmed.
-- Route AI education and curriculum to Major AI Mindset (MAIM) when its URL is confirmed.
+- Route the full personal journey, doctrine, books, and cross-venture work to [majordreamwilliams.com](https://majordreamwilliams.com).
+- Route AI education and curriculum to [Major AI Mindset (MAIM)](https://majoraimindset.com).
+- Confirm both destinations resolve to the intended sites before launch; active domain status alone does not confirm site deployment or DNS routing.
 - Follow [Brand Boundaries](BRAND-BOUNDARIES.md); do not turn AMA into a personal portfolio or education site.
 - Include only founder-approved biography, photos, and claims.
 
