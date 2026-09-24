@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroCanvas from "@/components/HeroCanvas";
 import { pageMetadata } from "@/lib/metadata";
+import { SchemaOrg } from "@/components/SchemaOrg";
 
 export const metadata: Metadata = pageMetadata({
   title: "AMA Solutions Corp",
@@ -45,8 +46,35 @@ const valueProps = [
 ];
 
 export default function HomePage() {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://amasolagi.com/#organization",
+        "name": "AMA Solutions Corp",
+        "url": "https://amasolagi.com",
+        "description": "AMA Solutions Corp delivers agentic services through 12 specialized Art Mob teams — the client-facing, accountability-backed corporation for the agentic era.",
+        "foundingDate": "2024",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://amasolagi.com/contact"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://amasolagi.com/#website",
+        "url": "https://amasolagi.com",
+        "name": "AMA Solutions Corp",
+        "publisher": { "@id": "https://amasolagi.com/#organization" }
+      }
+    ]
+  };
   return (
     <>
+      <SchemaOrg schema={orgSchema} />
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section
         aria-label="Hero"

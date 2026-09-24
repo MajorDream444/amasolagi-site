@@ -1,0 +1,66 @@
+# AMA Solutions Corp
+
+> Agentic delivery corporation. We bring people, specialized agent teams,
+> technical capabilities, and operating playbooks together to turn ambitious
+> ideas into scoped, reviewable work.
+
+## What we do
+
+AMA Solutions Corp is the commercial entity and client-facing front door for
+a network of 12 specialized Art Mob teams. Each Mob is a focused delivery unit
+built around a specific domain. Clients engage one Mob or a combination to scope
+and deliver a defined body of work.
+
+Delivery areas include strategy and brand, content and storytelling, digital
+product, operations and systems, data and intelligence, and more. Human review
+and client accountability are part of every engagement.
+
+## The 12 Art Mob teams
+
+Each Mob is a domain-focused delivery unit. The design calls for 144 positions
+across the 12 Mobs. Active deployment details are verified separately from this
+document.
+
+- Mob 01 · Strategy & Brand
+- Mob 02 · Content & Storytelling
+- Mob 03 · Digital Product
+- Mob 04 · Operations & Systems
+- Mob 05 · Data & Intelligence
+- Mob 06 · Growth & Community
+- Mob 07 · Finance & Capital
+- Mob 08 · Legal & Compliance
+- Mob 09 · Learning & Education
+- Mob 10 · Creative Technology
+- Mob 11 · Infrastructure & DevOps
+- Mob 12 · Global Logistics & Trade
+
+## HAMAL
+
+HAMAL is the coordinating intelligence layer connecting AMA's delivery network.
+It maintains shared context, playbooks, and orchestration across the Mobs.
+
+## Foundry OS
+
+Foundry OS is a modular operating system for agent-enabled work, currently in
+development. Licensing is a longer-term objective.
+
+## Who engages AMA
+
+- Clients: organizations with a delivery challenge for one or more Mobs
+- Strategic partners: agencies, platforms, or vendors for co-delivery
+- Investors: early-stage investors aligned with the agentic services thesis
+
+## Contact
+
+Web: https://amasolagi.com/contact
+Inquiries are routed to a human. No automated outbound communications.
+
+## Key pages
+
+- Homepage: https://amasolagi.com
+- How It Works: https://amasolagi.com/how-it-works
+- The Mobs: https://amasolagi.com/mobs
+- Foundry OS: https://amasolagi.com/foundry-os
+- Founder: https://amasolagi.com/founder
+- Partner & Invest: https://amasolagi.com/partner-invest
+- Contact: https://amasolagi.com/contact
