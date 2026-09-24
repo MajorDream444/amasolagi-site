@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -10,18 +11,18 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const mobs = [
-  { id: "01", name: "Avant-Garde Mob", domain: "Innovation & Foresight", description: "Scans emerging technologies and industry shifts, then develops and evaluates future-facing ideas.", tools: ["Future_Scanner", "Innovation_Hub", "Risk_Visionary"] },
-  { id: "02", name: "Artisans Mob", domain: "Data Craft & Insight", description: "Refines complex information and shapes precise, understandable insights from raw data.", tools: ["Data_Refiner", "Insight_Sculptor", "Trend_Artisan"] },
-  { id: "03", name: "Visionaries Mob", domain: "Strategic Foresight", description: "Maps long-term direction, explores possible futures, and forecasts the impact of decisions.", tools: ["Horizon_Planner", "Possibility_Generator", "Impact_Forecaster"] },
-  { id: "04", name: "Innovators Mob", domain: "Creative Technology", description: "Turns promising concepts into scalable solutions and explores new product and market opportunities.", tools: ["Concept_Builder", "Creative_Engine", "Market_Explorer"] },
-  { id: "05", name: "Maestros Mob", domain: "Orchestration & Systems", description: "Connects data and workflows so complex systems operate as a coordinated whole.", tools: ["Harmony_Analyzer", "Flow_Sync", "Data_Orchestrator"] },
-  { id: "06", name: "Revolutionaries Mob", domain: "Transformative Change", description: "Challenges inherited processes and develops bold approaches to meaningful change.", tools: ["Change_Catalyst", "Idea_Shaker", "Trend_Rebel"] },
-  { id: "07", name: "Luminaries Mob", domain: "Mentorship & Legacy", description: "Supports leadership growth, mentorship, and thoughtful succession planning.", tools: ["Mentor_Matrix", "Legacy_Builder", "Visionary_Guide"] },
-  { id: "08", name: "Vanguards Mob", domain: "Security & Responsible AI", description: "Focuses on digital protection, compliance awareness, and oversight of AI-enabled systems.", tools: ["Digital_Fortress", "Compliance_Guard", "AI_Watchtower"] },
-  { id: "09", name: "Provocateurs Mob", domain: "Bold Campaigns & Engagement", description: "Creates boundary-pushing campaigns designed to challenge perspectives and connect with audiences.", tools: ["Disrupt_Media", "Impact_Amplifier", "Engage_Booster"] },
-  { id: "10", name: "Dreamweavers Mob", domain: "Storytelling & Experience", description: "Develops imaginative brand stories and interactive experiences that build emotional connection.", tools: ["Imagination_Vault", "Interactive_Narrator", "Inspire_Generator"] },
-  { id: "11", name: "Guardians Mob", domain: "Trust & Reputation", description: "Helps organizations monitor reputation, prepare for crises, and strengthen transparent practices.", tools: ["Reputation_Watch", "Crisis_Control", "Trust_Sentinel"] },
-  { id: "12", name: "Strategists Mob", domain: "Planning & Growth", description: "Builds practical blueprints, improves operational efficiency, and identifies paths for growth.", tools: ["Blueprint_Maker", "Efficiency_Tuner", "Growth_Compass"] },
+  { id: "01", name: "Avant-Garde Mob", domain: "Innovation & Foresight", description: "Scans emerging technologies and industry shifts, then develops and evaluates future-facing ideas.", image: "/images/mobs/avant-garde.webp", tools: ["Future_Scanner", "Innovation_Hub", "Risk_Visionary"] },
+  { id: "02", name: "Artisans Mob", domain: "Data Craft & Insight", description: "Refines complex information and shapes precise, understandable insights from raw data.", image: "/images/mobs/artisans.webp", tools: ["Data_Refiner", "Insight_Sculptor", "Trend_Artisan"] },
+  { id: "03", name: "Visionaries Mob", domain: "Strategic Foresight", description: "Maps long-term direction, explores possible futures, and forecasts the impact of decisions.", image: "/images/mobs/visionaries.webp", tools: ["Horizon_Planner", "Possibility_Generator", "Impact_Forecaster"] },
+  { id: "04", name: "Innovators Mob", domain: "Creative Technology", description: "Turns promising concepts into scalable solutions and explores new product and market opportunities.", image: "/images/mobs/innovators.webp", tools: ["Concept_Builder", "Creative_Engine", "Market_Explorer"] },
+  { id: "05", name: "Maestros Mob", domain: "Orchestration & Systems", description: "Connects data and workflows so complex systems operate as a coordinated whole.", image: "/images/mobs/maestros.webp", tools: ["Harmony_Analyzer", "Flow_Sync", "Data_Orchestrator"] },
+  { id: "06", name: "Revolutionaries Mob", domain: "Transformative Change", description: "Challenges inherited processes and develops bold approaches to meaningful change.", image: "/images/mobs/revolutionaries.webp", tools: ["Change_Catalyst", "Idea_Shaker", "Trend_Rebel"] },
+  { id: "07", name: "Luminaries Mob", domain: "Mentorship & Legacy", description: "Supports leadership growth, mentorship, and thoughtful succession planning.", image: "/images/mobs/luminaries.webp", tools: ["Mentor_Matrix", "Legacy_Builder", "Visionary_Guide"] },
+  { id: "08", name: "Vanguards Mob", domain: "Security & Responsible AI", description: "Focuses on digital protection, compliance awareness, and oversight of AI-enabled systems.", image: "/images/mobs/vanguards.webp", tools: ["Digital_Fortress", "Compliance_Guard", "AI_Watchtower"] },
+  { id: "09", name: "Provocateurs Mob", domain: "Bold Campaigns & Engagement", description: "Creates boundary-pushing campaigns designed to challenge perspectives and connect with audiences.", image: "/images/mobs/provocateurs.webp", tools: ["Disrupt_Media", "Impact_Amplifier", "Engage_Booster"] },
+  { id: "10", name: "Dreamweavers Mob", domain: "Storytelling & Experience", description: "Develops imaginative brand stories and interactive experiences that build emotional connection.", image: "/images/mobs/dreamweavers.webp", tools: ["Imagination_Vault", "Interactive_Narrator", "Inspire_Generator"] },
+  { id: "11", name: "Guardians Mob", domain: "Trust & Reputation", description: "Helps organizations monitor reputation, prepare for crises, and strengthen transparent practices.", image: "/images/mobs/guardians.webp", tools: ["Reputation_Watch", "Crisis_Control", "Trust_Sentinel"] },
+  { id: "12", name: "Strategists Mob", domain: "Planning & Growth", description: "Builds practical blueprints, improves operational efficiency, and identifies paths for growth.", image: "/images/mobs/strategists.webp", tools: ["Blueprint_Maker", "Efficiency_Tuner", "Growth_Compass"] },
 ];
 
 export default function MobsPage() {
@@ -75,7 +76,7 @@ export default function MobsPage() {
       <section className="section">
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {mobs.map(({ id, name, domain, description, tools }) => (
+            {mobs.map(({ id, name, domain, description, image, tools }) => (
               <div
                 key={id}
                 className="mob-card"
@@ -87,25 +88,26 @@ export default function MobsPage() {
                   transition: "border-color 200ms ease",
                 }}
               >
-                <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 24, alignItems: "flex-start" }}>
-                  {/* ID */}
-                  <span
-                    style={{
-                      fontFamily: "var(--font-display, Inter, sans-serif)",
-                      fontSize: 32,
-                      fontWeight: 500,
-                      color: "var(--gold)",
-                      opacity: 0.4,
-                      lineHeight: 1,
-                      minWidth: 48,
-                    }}
-                  >
-                    {id}
-                  </span>
+                <div style={{ display: "grid", gridTemplateColumns: "80px minmax(0, 1fr)", gap: 24, alignItems: "flex-start" }}>
+                  <figure style={{ margin: 0, width: 80, flexShrink: 0 }}>
+                    <Image
+                      src={image}
+                      alt={`Illustrative placeholder artwork for ${name}`}
+                      width={1122}
+                      height={1402}
+                      sizes="80px"
+                      quality={80}
+                      style={{ display: "block", width: 80, height: 100, objectFit: "cover", borderRadius: 12, border: "1px solid var(--border-light)" }}
+                    />
+                    <figcaption style={{ color: "var(--text-dim)", fontSize: 9, lineHeight: 1.3, marginTop: 6, textAlign: "center" }}>
+                      Placeholder art
+                    </figcaption>
+                  </figure>
 
                   <div>
                     {/* Header */}
                     <div style={{ display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8 }}>
+                      <span className="label-mono" style={{ color: "var(--gold-dim)" }}>Mob {id}</span>
                       <h2
                         style={{
                           fontFamily: "var(--font-display, Inter, sans-serif)",
@@ -177,4 +179,3 @@ export default function MobsPage() {
     </>
   );
 }
-
