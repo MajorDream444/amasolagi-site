@@ -9,7 +9,7 @@ Build the public website for AMA Solutions Corp in this GitHub repository: https
 
 AMA Solutions Corp is the company, client-facing commercial entity, and intended investment vehicle. The site is for strategic partners and investors, while also giving prospective clients a clear path to discuss work.
 
-Core model: HAMAL is the coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux. The 12 Art Mob teams are the client-facing delivery units; the design envisions 144 AGInts across 12 Mobs, with 12 designed positions per Mob. Foundry OS is an operating system in development, intended to make agent-enabled work modular and eventually licensable.
+Core model: HAMAL is the coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux. The 12 Art Mob teams are the client-facing delivery units; the campus vision is 144 AGINT positions across the network. Do not state a per-Mob count until the canonical roster is reconciled. Foundry OS is an operating system in development, intended to make agent-enabled work modular and eventually licensable.
 
 Keep this site focused on the corporation. Major Dream Williams’s personal journey, doctrine, and books belong on majordreamwilliams.com. AI education belongs on Major AI Mindset at majoraimindset.com. Both domains appear active, but hosting and DNS routing still need verification. AMA’s intended domain is amasolagi.com; deployment and DNS routing also need verification.
 
