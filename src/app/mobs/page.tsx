@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "The 12 Art Mobs",
   description:
-    "AMA Solutions Corp coordinates 12 specialized Art Mob teams — each a domain-focused delivery unit with 12 designed positions.",
+    "AMA Solutions Corp coordinates 12 specialized Art Mob teams, with a campus vision for 144 planned AGINT positions across the network.",
   path: "/mobs",
 });
 
@@ -47,7 +47,7 @@ export default function MobsPage() {
           </h1>
           <p className="body-mono" style={{ color: "var(--text-secondary)", maxWidth: 560, margin: "0 0 16px" }}>
             Each Art Mob is a specialized delivery unit built around a core domain.
-            12 designed positions per Mob — 144 total — with human oversight throughout.
+            The campus vision plans for 144 positions across the network, with human oversight throughout.
             Active deployment roster is tracked and verified separately from this design spec.
           </p>
           <p
@@ -177,3 +177,4 @@ export default function MobsPage() {
     </>
   );
 }
+
