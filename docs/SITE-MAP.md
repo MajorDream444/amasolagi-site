@@ -18,6 +18,8 @@ The first release should make the company legible before asking visitors to expl
 - Give visitors a problem-first way to explore the 12 teams.
 - Use the approved service taxonomy in the Mob deep dives and canonical handoff.
 - Distinguish a Mob’s designed focus from verified current availability.
+- Mob details may include **Tools & methods** using the concepts in [Mob Tool Catalog](MOB-TOOL-CATALOG.md).
+- Label every unverified tool as a proposed capability concept; do not suggest that it is implemented, integrated, or callable.
 - Route inquiries to AMA; do not imply direct agent booking unless implemented and approved.
 
 ## Foundry OS
