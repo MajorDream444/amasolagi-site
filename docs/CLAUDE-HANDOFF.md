@@ -1,6 +1,6 @@
 # Claude Code / Claude Cowork Handoff
 
-You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, and `docs/SITE-MAP.md` before changing code or copy.
+You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, and `docs/MOB-TOOL-CATALOG.md` before changing code or copy.
 
 ## Approved direction
 
@@ -11,6 +11,12 @@ You are building the public AMA Solutions website in this repository. Treat the 
 - Foundry OS is in development, with modularity and licensing as a longer-term goal.
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.
+
+## Mob tool concepts
+
+`docs/MOB-TOOL-CATALOG.md` records 36 proposed, Mob-associated tool concepts. Treat their names, functions, and industry examples as design concepts only. Do not present them as existing software, integrations, or deployed capabilities unless evidence is added and the owner verifies it. Avoid unsupported guarantees about security, compliance, prediction, monitoring, or outcomes.
+
+A future registry entry should record status, owner, purpose, inputs, outputs, permissions, dependencies, human review, evidence, and verification date. Industry examples are not client deployments or case studies.
 
 ## Reference repos
 
