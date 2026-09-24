@@ -1,6 +1,6 @@
 # Claude Cowork Project Setup — AMA Solutions Website
 
-Use this file to create the Claude Cowork project and start the build. The project description and first prompt below are ready to copy and paste.
+Use the short **Project description** below in Cowork’s description field. Paste the complete, persistent instruction set from [COWORK-PROJECT-INSTRUCTIONS.md](COWORK-PROJECT-INSTRUCTIONS.md) into the project instructions field. Then use the **First Cowork prompt** to begin the build.
 
 ## Project description
 
