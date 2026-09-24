@@ -1,5 +1,7 @@
 # AMA Solutions Website
 
+**Planned public domain:** [amasolagi.com](https://amasolagi.com) — domain is active; website deployment and DNS routing are not yet verified.
+
 Public website for **AMA Solutions Corp**: the company’s home for strategic partners, investors, and clients.
 
 This repository is the canonical home for website code, approved website copy, design decisions, and implementation handoffs. GitHub is the source of truth. Claude Code, Claude Cowork, and Codex are work surfaces that should read and update this repository.
