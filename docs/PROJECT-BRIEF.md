@@ -1,6 +1,7 @@
 # AMA Solutions Website — Project Brief
 
 **Owner:** Major Dream Williams / AMA Solutions Corp  
+**Primary domain:** [amasolagi.com](https://amasolagi.com) (active domain; deployment and DNS routing not verified)  
 **Audience:** prospective strategic partners, investors, and clients  
 **Purpose:** create one clear public home for AMA Solutions and the work it is building.
 
@@ -59,7 +60,7 @@ Use clear labels such as **Vision**, **In development**, **Prototype**, and **Ve
 
 ## Do not publish without confirmation
 
-- Exact domain and email addresses
+- Email addresses, contact routes, and deployment/DNS configuration
 - Current offers, prices, and booking availability
 - Investor terms, SAFE terms, or public solicitation language
 - Client logos, results, testimonials, or case studies
