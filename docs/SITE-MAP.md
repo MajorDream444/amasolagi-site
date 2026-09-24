@@ -14,12 +14,15 @@ The first release should make the company legible before asking visitors to expl
 - Show the feedback loop: shared playbooks and context equip Mobs; reviewed learning from delivery can inform future playbooks.
 - Make human scoping, review, and accountability visible.
 
-## The Mobs
+## The Mobs and Campus
 - Give visitors a problem-first way to explore the 12 teams.
 - Use the approved service taxonomy in the Mob deep dives and canonical handoff.
+- Use [Campus Architecture](CAMPUS-ARCHITECTURE.md) as a visual direction for the 12 districts.
+- Treat building styles, slogans, interior scenes, and interactive effects as proposed story design, not a physical campus or live system.
 - Distinguish a Mob’s designed focus from verified current availability.
-- Mob details may include **Tools & methods** using the concepts in [Mob Tool Catalog](MOB-TOOL-CATALOG.md).
-- Label every unverified tool as a proposed capability concept; do not suggest that it is implemented, integrated, or callable.
+- Mob details may include **Tools & methods** using [Mob Tool Catalog](MOB-TOOL-CATALOG.md).
+- Label every unverified tool as a proposed capability concept; do not suggest it is implemented, integrated, or callable.
+- Provide accessible text and static alternatives for hover, animation, maps, and campus visuals.
 - Route inquiries to AMA; do not imply direct agent booking unless implemented and approved.
 
 ## Foundry OS
