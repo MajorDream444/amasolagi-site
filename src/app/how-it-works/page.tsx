@@ -18,7 +18,7 @@ const steps = [
   {
     n: "02",
     title: "Mob Assignment",
-    body: "Work is routed to the domain-specific Art Mob — or a cross-Mob team when the project calls for it. Each Mob has 12 designed positions with clear ownership.",
+    body: "Work is routed to the domain-specific Art Mob — or a cross-Mob team when the project calls for it. The campus vision plans for 144 AGINT positions across the network, with clear ownership for each engagement.",
   },
   {
     n: "03",
