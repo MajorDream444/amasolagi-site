@@ -119,6 +119,12 @@ export default function ContactPage() {
                     major@amasolagi.com
                   </a>
                 </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: "8px 0 0" }}>
+                  Phone: {" "}
+                  <a href="tel:+61450461470" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    +61 450 461 470
+                  </a>
+                </p>
               </div>
 
               <div

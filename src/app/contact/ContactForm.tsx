@@ -147,8 +147,7 @@ export default function ContactForm() {
         The contact form is not connected yet; submitted details are not sent or stored. Email us at{" "}
         <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
           info@amasolagi.com
-        </a>
-        .
+        </a>{" "}or call <a href="tel:+61450461470" style={{ color: "var(--gold)", textDecoration: "none" }}>+61 450 461 470</a>.
       </p>
     </form>
   );
