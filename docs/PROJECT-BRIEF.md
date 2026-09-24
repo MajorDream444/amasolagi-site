@@ -24,7 +24,7 @@ The corporation is the public company, client relationship owner, contracting en
 HAMAL is the top coordinating Mob and intelligence layer across Hanzo, AMA, and Lux. It maintains broad system context, develops playbooks and orchestration standards, and helps the 12 delivery Mobs share useful learning. HAMAL enables the delivery network; clients normally engage the relevant Art Mob team for defined work.
 
 ### The 12 Art Mob teams
-The 12 Mobs are the client-facing delivery units. The design envisions 144 Art Mob AGInts distributed across 12 Mobs: 12 designed positions per Mob. A client can engage a full Mob or a suitable portion of one, depending on the scope. Show the campus as a navigable story and capability map, while clearly distinguishing envisioned organization from verified deployments.
+The 12 Mobs are the client-facing delivery units. The campus vision describes 144 Art Mob AGINT positions across the network. A client can engage a full Mob or a suitable portion of one, depending on the scope. Show the campus as a navigable story and capability map, while clearly distinguishing envisioned organization from verified deployments. Do not state a per-Mob position count until the canonical roster is reconciled.
 
 ### Foundry OS
 Foundry OS is in development as a modular operating system for coordinating agent-enabled work, with a longer-term intention to make parts of the system operational and licensable. Do not describe it as a generally available product until that status is verified.
