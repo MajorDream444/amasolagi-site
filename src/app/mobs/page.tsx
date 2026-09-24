@@ -138,6 +138,7 @@ export default function MobsPage() {
             {mobs.map(({ id, name, domain, description, positions }) => (
               <div
                 key={id}
+                className="mob-card"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border)",
@@ -145,8 +146,6 @@ export default function MobsPage() {
                   padding: "32px",
                   transition: "border-color 200ms ease",
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLDivElement).style.borderColor = "var(--border-light)")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)")}
               >
                 <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 24, alignItems: "flex-start" }}>
                   {/* ID */}

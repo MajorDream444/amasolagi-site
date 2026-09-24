@@ -107,6 +107,7 @@ export default function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
+                      className="footer-link"
                       style={{
                         fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
                         fontSize: 13,
@@ -114,8 +115,6 @@ export default function Footer() {
                         textDecoration: "none",
                         transition: "color 150ms ease",
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
                     >
                       {label}
                     </Link>

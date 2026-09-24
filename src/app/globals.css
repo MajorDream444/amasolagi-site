@@ -68,6 +68,21 @@ body {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 100;
+  padding: 8px 12px;
+  color: #080808;
+  background: var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
 /* ─── Typography scale ──────────────────────────────────────────────────── */
 .display-xl {
   font-family: var(--font-display, 'Inter', sans-serif);
@@ -137,6 +152,23 @@ body {
 .card-gold:hover {
   border-color: var(--gold-dim);
   box-shadow: 0 0 0 1px var(--gold-dim), 0 8px 32px var(--gold-glow);
+}
+
+.footer-link {
+  color: var(--text-secondary);
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.mob-card:hover,
+.home-mob-card:hover {
+  border-color: var(--border-light) !important;
+}
+
+.home-mob-card:hover {
+  transform: translateY(-2px);
 }
 
 /* ─── Buttons ───────────────────────────────────────────────────────────── */

@@ -304,20 +304,13 @@ export default function HomePage() {
             {mobs.map(({ id, name, domain }) => (
               <div
                 key={id}
+                className="home-mob-card"
                 style={{
                   background: "var(--bg)",
                   border: "1px solid var(--border)",
                   borderRadius: 20,
                   padding: "20px 20px 18px",
                   transition: "border-color 200ms ease, transform 200ms ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border-light)";
-                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)";
-                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
                 }}
               >
                 <span className="label-mono" style={{ color: "var(--gold-dim)", display: "block", marginBottom: 8 }}>
