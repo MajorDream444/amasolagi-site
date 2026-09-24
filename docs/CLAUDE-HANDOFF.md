@@ -1,6 +1,6 @@
 # Claude Code / Claude Cowork Handoff
 
-You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, `docs/CAMPUS-ARCHITECTURE.md`, and `docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` before changing code or copy.
+You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, `docs/CAMPUS-ARCHITECTURE.md`, `docs/BRAND-BOUNDARIES.md`, and `docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` before changing code or copy.
 
 ## Approved direction
 
@@ -11,7 +11,13 @@ You are building the public AMA Solutions website in this repository. Treat the 
 - Foundry OS is in development, with modularity and licensing as a longer-term goal.
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.
-- Preserve the athlete and community mission as founder origin and possible impact direction within AMA’s broader current work. Do not reduce the current company story to a legacy athlete NFT platform.
+- Keep AMA’s website corporation-first. Its content is about AMA Solutions Corp, its work, delivery model, initiatives, and investment/partner pathways.
+- Include only a concise, company-relevant founder section. Major’s broader personal journey, doctrine, books, and cross-venture work belong on his personal website; MAIM’s education content belongs on the MAIM website. Their URLs are pending confirmation.
+- Treat the athlete and community mission as historical origin and possible application areas, not as a claim that the corporation currently operates every related product or program.
+
+## Brand boundaries
+
+Follow `docs/BRAND-BOUNDARIES.md`. Do not turn the AMA site into Major’s personal portfolio, book site, or AI education platform. A short founder introduction is appropriate only when it helps explain AMA and its leadership. Keep books, personal doctrine, and cross-venture biography for the personal site; route learning and curriculum to MAIM. Do not invent either site’s URL.
 
 ## Founder history and product-claim boundaries
 
