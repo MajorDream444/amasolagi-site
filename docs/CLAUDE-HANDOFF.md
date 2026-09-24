@@ -1,16 +1,22 @@
 # Claude Code / Claude Cowork Handoff
 
-You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, and `docs/MOB-TOOL-CATALOG.md` before changing code or copy.
+You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, and `docs/CAMPUS-ARCHITECTURE.md` before changing code or copy.
 
 ## Approved direction
 
 - AMA Solutions Corp is the company and public commercial front door.
 - HAMAL is the top coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux.
 - The 12 Art Mob teams are the client-facing delivery units; clients engage a relevant Mob or portion of a Mob.
-- The intended network is 144 AGInts across 12 Mobs. Do not represent the entire roster as deployed.
+- The intended network is 144 AGInts across 12 Mobs: 12 designed positions per Mob. Do not represent the entire roster as deployed.
 - Foundry OS is in development, with modularity and licensing as a longer-term goal.
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.
+
+## Campus design concepts
+
+`docs/CAMPUS-ARCHITECTURE.md` contains proposed district styles and interaction ideas. Treat these as visual direction for a digital story map. They do not establish a physical campus or deployed interactive experience. Keep accessibility, mobile layouts, keyboard access, and reduced motion in the design.
+
+The supplied concept text says each Mob has 14 AGInts. That conflicts with the current canonical structure of 144 positions across 12 Mobs. Use 12 per Mob unless Major explicitly updates the roster canon.
 
 ## Mob tool concepts
 
