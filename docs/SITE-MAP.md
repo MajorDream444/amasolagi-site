@@ -30,8 +30,11 @@ The first release should make the company legible before asking visitors to expl
 - Separate the current discovery/prototype state from the longer-term licensable-product vision.
 
 ## Founder
-- Tell Major Dream Williams’s story and the point of view behind AMA.
-- Include only approved biography, photos, and claims.
+- Keep this a concise, company-relevant founder section: Major’s role and why his experience connects to AMA.
+- Route the full personal journey, doctrine, books, and cross-venture work to Major’s personal website when its URL is confirmed.
+- Route AI education and curriculum to Major AI Mindset (MAIM) when its URL is confirmed.
+- Follow [Brand Boundaries](BRAND-BOUNDARIES.md); do not turn AMA into a personal portfolio or education site.
+- Include only founder-approved biography, photos, and claims.
 
 ## Partner / Invest
 - Separate strategic partnership inquiries from investment inquiries.
