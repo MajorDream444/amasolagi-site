@@ -17,22 +17,23 @@ and client accountability are part of every engagement.
 
 ## The 12 Art Mob teams
 
-Each Mob is a domain-focused delivery unit. The design calls for 144 positions
-across the 12 Mobs. Active deployment details are verified separately from this
-document.
+Each Mob is a domain-focused delivery unit. The campus vision plans for 144
+AGINT positions across the 12 Mobs. Active deployment details are verified
+separately from this document. Tool names below are illustrative concepts from
+AMA planning materials, not a claim that those tools are currently deployed.
 
-- Mob 01 · Strategy & Brand
-- Mob 02 · Content & Storytelling
-- Mob 03 · Digital Product
-- Mob 04 · Operations & Systems
-- Mob 05 · Data & Intelligence
-- Mob 06 · Growth & Community
-- Mob 07 · Finance & Capital
-- Mob 08 · Legal & Compliance
-- Mob 09 · Learning & Education
-- Mob 10 · Creative Technology
-- Mob 11 · Infrastructure & DevOps
-- Mob 12 · Global Logistics & Trade
+- Mob 01 · Avant-Garde — innovation and foresight
+- Mob 02 · Artisans — data craft and insight
+- Mob 03 · Visionaries — strategic foresight
+- Mob 04 · Innovators — creative technology
+- Mob 05 · Maestros — orchestration and systems
+- Mob 06 · Revolutionaries — transformative change
+- Mob 07 · Luminaries — mentorship and legacy
+- Mob 08 · Vanguards — security and responsible AI
+- Mob 09 · Provocateurs — bold campaigns and engagement
+- Mob 10 · Dreamweavers — storytelling and experience
+- Mob 11 · Guardians — trust and reputation
+- Mob 12 · Strategists — planning and growth
 
 ## HAMAL
 
@@ -53,7 +54,7 @@ development. Licensing is a longer-term objective.
 ## Contact
 
 Web: https://amasolagi.com/contact
-Inquiries are routed to a human. No automated outbound communications.
+The contact form is not yet connected to an inbox. No automated outbound communications.
 
 ## Key pages
 
