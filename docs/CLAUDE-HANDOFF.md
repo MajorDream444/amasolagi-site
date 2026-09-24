@@ -1,6 +1,6 @@
 # Claude Code / Claude Cowork Handoff
 
-You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, and `docs/CAMPUS-ARCHITECTURE.md` before changing code or copy.
+You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, `docs/CAMPUS-ARCHITECTURE.md`, and `docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` before changing code or copy.
 
 ## Approved direction
 
@@ -11,6 +11,13 @@ You are building the public AMA Solutions website in this repository. Treat the 
 - Foundry OS is in development, with modularity and licensing as a longer-term goal.
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.
+- Preserve the athlete and community mission as founder origin and possible impact direction within AMA’s broader current work. Do not reduce the current company story to a legacy athlete NFT platform.
+
+## Founder history and product-claim boundaries
+
+`docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` records historical context: the athlete-first origin, NIL and career agency, legacy, financial literacy, digital-economy access, and possible community focus. It also records historical product concepts, including NFTs, analytics, AI career assistance, smart contracts, and education programs.
+
+Use that document as background, not as proof of current delivery. Do not describe historical product ideas, royalties, dashboards, AI assistants, programs, or impact outcomes as live without current evidence and owner verification. Get Major’s review for family details, biography, named people, and personal claims before publication. Do not use the historic letter-by-letter A.G.I.N.T.S. interpretation as the current canonical expansion without explicit approval.
 
 ## Campus design concepts
 
