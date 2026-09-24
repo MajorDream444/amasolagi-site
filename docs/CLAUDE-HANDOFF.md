@@ -12,7 +12,7 @@ You are building the public AMA Solutions website in this repository. Treat the 
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.
 - Keep AMA’s website corporation-first. Its content is about AMA Solutions Corp, its work, delivery model, initiatives, and investment/partner pathways.
-- Include only a concise, company-relevant founder section. Major’s broader personal journey, doctrine, books, and cross-venture work belong on his personal website; MAIM’s education content belongs on the MAIM website. Their URLs are pending confirmation.
+- Include only a concise, company-relevant founder section. Major’s broader personal journey, doctrine, books, and cross-venture work belong on his personal website; MAIM’s education content belongs on the MAIM website. Their domains are [majordreamwilliams.com](https://majordreamwilliams.com) and [majoraimindset.com](https://majoraimindset.com); the screenshot shows them active. Verify site deployment and DNS routing before launch or before presenting them as working destinations.
 - Treat the athlete and community mission as historical origin and possible application areas, not as a claim that the corporation currently operates every related product or program.
 
 ## Brand boundaries
@@ -56,7 +56,7 @@ Do not treat the external agent library as AMA’s approved roster. Do not move 
 2. Before choosing a framework, inspect the root files and explain the proposed stack briefly. Keep the choice easy to run and deploy.
 3. Keep website copy grounded in the project brief. If a factual claim is unclear, mark it for owner review instead of inventing it.
 4. Clearly label vision, prototype, in-development, and verified-live capabilities.
-5. Keep contact, email, booking, and investment calls to action as placeholders until their destinations and wording are confirmed.
+5. Use amasolagi.com as the intended AMA domain. The domain is active, but deployment and DNS routing are not verified. Keep email, booking, and investment calls to action as placeholders until their destinations and wording are confirmed.
 6. Build an accessible, responsive site; support keyboard navigation and reduced motion.
 7. Do not add secrets, live external integrations, payment flows, investor terms, or automated claims.
 8. Record material content and architecture decisions in this repo.
