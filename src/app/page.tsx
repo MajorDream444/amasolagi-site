@@ -13,25 +13,25 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const mobs = [
-  { id: "01", name: "Strategy Mob",     domain: "Positioning, roadmapping, market research" },
-  { id: "02", name: "Brand Mob",        domain: "Identity, visual design, brand systems" },
-  { id: "03", name: "Content Mob",      domain: "Copy, editorial, content strategy" },
-  { id: "04", name: "Media Mob",        domain: "Video, audio, multimedia production" },
-  { id: "05", name: "Web Mob",          domain: "Frontend, sites, web experiences" },
-  { id: "06", name: "Data Mob",         domain: "Analytics, reporting, data pipelines" },
-  { id: "07", name: "Ops Mob",          domain: "Workflow automation, process design" },
-  { id: "08", name: "Finance Mob",      domain: "Treasury, budgeting, financial modeling" },
-  { id: "09", name: "Legal Mob",        domain: "Contracts, compliance, document prep" },
-  { id: "10", name: "Commerce Mob",     domain: "E-commerce, marketplaces, sales ops" },
-  { id: "11", name: "Culture Mob",      domain: "Community, events, culture programming" },
-  { id: "12", name: "Intelligence Mob", domain: "Research, competitive intel, knowledge" },
+  { id: "01", name: "Avant-Garde Mob", domain: "Innovation & foresight" },
+  { id: "02", name: "Artisans Mob", domain: "Data craft & insight" },
+  { id: "03", name: "Visionaries Mob", domain: "Strategic foresight" },
+  { id: "04", name: "Innovators Mob", domain: "Creative technology" },
+  { id: "05", name: "Maestros Mob", domain: "Orchestration & systems" },
+  { id: "06", name: "Revolutionaries Mob", domain: "Transformative change" },
+  { id: "07", name: "Luminaries Mob", domain: "Mentorship & legacy" },
+  { id: "08", name: "Vanguards Mob", domain: "Security & responsible AI" },
+  { id: "09", name: "Provocateurs Mob", domain: "Bold campaigns & engagement" },
+  { id: "10", name: "Dreamweavers Mob", domain: "Storytelling & experience" },
+  { id: "11", name: "Guardians Mob", domain: "Trust & reputation" },
+  { id: "12", name: "Strategists Mob", domain: "Planning & growth" },
 ];
 
 const valueProps = [
   {
     icon: "◈",
     title: "12 Specialized Teams",
-    body: "Each Art Mob is a domain-focused delivery unit with 12 designed positions — human-reviewed, agent-enabled, accountable end to end.",
+    body: "The campus model plans for 144 AGINT positions across 12 domain-focused Mobs. Teams are formed around client work with human review and accountability.",
   },
   {
     icon: "⬡",
