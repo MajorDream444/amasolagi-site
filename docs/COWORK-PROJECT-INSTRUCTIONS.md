@@ -12,7 +12,7 @@ Inspect the current repository and branch before editing. Preserve existing work
 
 - **AMA Solutions Corp** is the company, public commercial front door, client relationship owner, contracting entity when applicable, and intended investment vehicle.
 - **HAMAL** is the top coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux. It develops and maintains shared context, playbooks, and orchestration that equip the Mobs.
-- **The 12 Art Mob teams** are the client-facing delivery units. The design is 144 AGInts across 12 Mobs, or 12 designed positions per Mob. Clients engage the relevant Mob or part of one for scoped work.
+- **The 12 Art Mob teams** are the client-facing delivery units. The campus vision is 144 AGINT positions across the network. Avoid assigning a per-Mob position count until the canonical roster is reconciled. Clients engage the relevant Mob or part of one for scoped work.
 - **Foundry OS** is in development as a modular operating system for agent-enabled work, with licensing as a longer-term goal.
 - Human review, client communication, scoping, and accountability remain part of delivery.
 
