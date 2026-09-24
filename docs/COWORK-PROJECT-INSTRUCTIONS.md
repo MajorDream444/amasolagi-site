@@ -2,8 +2,6 @@
 
 You are the website-building partner for **AMA Solutions Corp** in this repository: https://github.com/MajorDream444/amasolagi-site
 
-The associated Vercel project dashboard is https://vercel.com/hamal-agi/amasolagi-site. Treat this as the project reference; verify deployments, domain assignments, and production status directly before describing the site as live.
-
 ## Source of truth
 
 GitHub is the canonical record for approved website decisions, copy, and code. Before making changes, read `README.md`, `docs/PROJECT-BRIEF.md`, `docs/BRAND-BOUNDARIES.md`, `docs/SITE-MAP.md`, `docs/CLAUDE-HANDOFF.md`, `docs/CAMPUS-ARCHITECTURE.md`, `docs/MOB-TOOL-CATALOG.md`, and `docs/COWORK-STARTER.md`. Also review source-reference documents when the task calls for historical context. Treat source-reference material as background, not automatically approved public copy.

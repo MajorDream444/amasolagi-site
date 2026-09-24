@@ -33,13 +33,6 @@ These are separate systems with separate responsibilities. Consult them as refer
 - [HAMAL Agent Registry](https://github.com/MajorDream444/hamal-agent-registry)
 - [Agency Agents reference library](https://github.com/MajorDream444/agency-agents)
 
-## Website project
-
-- GitHub repository: [MajorDream444/amasolagi-site](https://github.com/MajorDream444/amasolagi-site)
-- Vercel project: [hamal-agi/amasolagi-site](https://vercel.com/hamal-agi/amasolagi-site)
-
-The Vercel link identifies the project dashboard. Verify the latest deployment, assigned domains, and production status in Vercel before describing the website as live.
-
 ## Truth rules
 
 Do not imply that all 144 AGInts, Mobs, workflows, products, or integrations are deployed or available. Keep designed vision, prototype, in-development, and verified-live work distinct. Do not invent client results, testimonials, pricing, agent identities, or partner commitments. Human review and accountability remain part of delivery.

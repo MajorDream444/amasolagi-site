@@ -2,8 +2,6 @@
 
 You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, `docs/CAMPUS-ARCHITECTURE.md`, `docs/BRAND-BOUNDARIES.md`, and `docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` before changing code or copy.
 
-Associated Vercel project dashboard: https://vercel.com/hamal-agi/amasolagi-site. Verify deployment and domain status there before making any live-site claim.
-
 ## Approved direction
 
 - AMA Solutions Corp is the company and public commercial front door.
