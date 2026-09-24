@@ -31,13 +31,17 @@ Foundry OS is in development as a modular operating system for coordinating agen
 ### Hanzo and Lux
 Hanzo contributes AI and technical capabilities; Lux contributes sovereignty, provenance, or related infrastructure where applicable. HAMAL connects these capabilities to AMA’s delivery architecture. Describe concrete implementations only when confirmed for the specific project.
 
-## Founder origin and impact context
+## Brand boundary and founder context
 
-AMA’s earlier vision grew from Major’s experience as a former athlete and his belief that athletes should be equipped to manage their careers as businesses, understand their NIL, and build financial and cultural legacies beyond active competition. That origin remains part of the founder story and informs possible application areas.
+This is the **AMA Solutions corporate website**, not Major Dream Williams’s personal website. Keep its content focused on the corporation: its capabilities, delivery model, initiatives, development stage, partners, client pathways, and investment interest.
 
-The earlier vision also included financial literacy, digital-economy education, and expanded access for underserved communities, including single mothers and families in the Caribbean and Southeast Asia. These themes may be presented as founder motivation or intended impact areas. Do not imply active programs, products, participants, or measured outcomes without current evidence.
+A concise founder section may explain Major’s role and the relevant origin of AMA. The fuller personal journey, philosophy, doctrine, books, speaking work, and initiatives spanning multiple ventures belong on Major’s personal website. Its domain is pending confirmation.
 
-See [Founder Origin and Athlete Legacy](source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md) for the historical context and claim review notes. Treat historical athlete products—NFT minting, analytics dashboards, an AI companion, smart-contract royalties, and education programs—as concepts until their current status is verified.
+**Major AI Mindset (MAIM)** is the education-focused platform for helping people build AI confidence, literacy, and practical skill. Direct education visitors to MAIM rather than reproducing its curriculum on the AMA site. Add links to Major’s personal site and MAIM only after their exact URLs are confirmed.
+
+AMA’s athlete-centered origin—Major’s former-athlete perspective and his belief that athletes should manage their careers as businesses, understand NIL, and build long-term legacies—may be summarized where it explains the company’s history. The earlier vision also included financial literacy and expanded access to digital-economy education for underserved communities. Do not imply these programs or products are currently delivered without evidence.
+
+See [Brand Boundaries](BRAND-BOUNDARIES.md) for the routing rules and [Founder Origin and Athlete Legacy](source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md) for historical context. Treat historical athlete products—NFT minting, analytics dashboards, an AI companion, smart-contract royalties, and education programs—as concepts until their current status is verified.
 
 ## Primary audiences and actions
 
