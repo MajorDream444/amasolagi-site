@@ -5,11 +5,10 @@ import { useState } from "react";
 
 const links = [
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/mobs", label: "The Mobs" },
-  { href: "/foundry-os", label: "Foundry OS" },
-  { href: "/founder", label: "Founder" },
-  { href: "/partner-invest", label: "Partner / Invest" },
-  { href: "/contact", label: "Contact" },
+  { href: "/mobs",         label: "The Mobs" },
+  { href: "/foundry-os",   label: "Foundry OS" },
+  { href: "/founder",      label: "Founder" },
+  { href: "/partner-invest", label: "Partner" },
 ];
 
 export default function Nav() {
@@ -19,153 +18,209 @@ export default function Nav() {
   return (
     <header
       style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
         borderBottom: "1px solid var(--border)",
-        backgroundColor: "rgba(8,12,24,0.95)",
-        backdropFilter: "blur(12px)",
+        background: "rgba(8,8,8,0.85)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
       }}
-      className="fixed top-0 left-0 right-0 z-50"
     >
-      <nav
-        className="max-w-7xl mx-auto px-6 flex items-center justify-between"
-        style={{ height: "64px" }}
-        aria-label="Main navigation"
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          height: 64,
+        }}
       >
-        {/* Logo */}
+        {/* Wordmark */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-semibold text-lg tracking-tight"
-          style={{ color: "var(--text)" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            textDecoration: "none",
+          }}
+          aria-label="AMA Solutions Corp home"
         >
           <span
             style={{
-              color: "var(--gold)",
-              fontWeight: 800,
-              fontSize: "1.1rem",
-              letterSpacing: "-0.02em",
+              width: 28,
+              height: 28,
+              borderRadius: 6,
+              background: "var(--gold)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
             }}
           >
-            AMA
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 1L13 12H1L7 1Z" fill="#080808" />
+            </svg>
           </span>
-          <span style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>
-            Solutions Corp
+          <span
+            style={{
+              fontFamily: "var(--font-display, Inter, sans-serif)",
+              fontWeight: 600,
+              fontSize: 15,
+              letterSpacing: "-0.01em",
+              color: "var(--text)",
+            }}
+          >
+            AMA Solutions
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+              fontSize: 10,
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "var(--text-dim)",
+              alignSelf: "flex-end",
+              paddingBottom: 1,
+            }}
+          >
+            Corp
           </span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-1" role="list">
-          {links.map((l) => {
-            const active = pathname === l.href;
+        {/* Desktop nav */}
+        <nav
+          aria-label="Main navigation"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 4,
+          }}
+          className="hidden-mobile"
+        >
+          {links.map(({ href, label }) => {
+            const active = pathname === href || pathname.startsWith(href + "/");
             return (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  style={{
-                    color: active ? "var(--gold)" : "var(--text-muted)",
-                    fontSize: "0.875rem",
-                    padding: "0.375rem 0.75rem",
-                    borderRadius: "6px",
-                    display: "block",
-                    transition: "color 0.15s, background 0.15s",
-                  }}
-                  className="hover:text-white"
-                  aria-current={active ? "page" : undefined}
-                >
-                  {l.label}
-                </Link>
-              </li>
+              <Link
+                key={href}
+                href={href}
+                style={{
+                  padding: "6px 14px",
+                  borderRadius: "var(--radius-pill)",
+                  fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+                  fontSize: 12,
+                  fontWeight: active ? 600 : 400,
+                  letterSpacing: "0.04em",
+                  color: active ? "var(--gold-light)" : "var(--text-secondary)",
+                  textDecoration: "none",
+                  background: active ? "rgba(201,162,39,0.08)" : "transparent",
+                  border: active ? "1px solid rgba(201,162,39,0.2)" : "1px solid transparent",
+                  transition: "color 150ms ease, background 150ms ease, border-color 150ms ease",
+                }}
+              >
+                {label}
+              </Link>
             );
           })}
-        </ul>
+        </nav>
 
-        {/* Desktop CTA */}
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center gap-2 font-medium text-sm px-4 py-2 rounded-lg transition-all"
-          style={{
-            background: "var(--gold)",
-            color: "#000",
-            fontWeight: 600,
-          }}
-        >
-          Discuss a project
-        </Link>
+        {/* CTA */}
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <Link
+            href="/contact"
+            className="btn-primary"
+            style={{ fontSize: 11, padding: "10px 20px" }}
+          >
+            Start a Conversation
+          </Link>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg"
-          style={{ color: "var(--text)" }}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
-          <span
-            className="block w-5 h-0.5 mb-1 transition-all"
+          {/* Mobile hamburger */}
+          <button
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+            className="show-mobile"
             style={{
-              backgroundColor: "currentColor",
-              transform: open ? "rotate(45deg) translate(3px,3px)" : "none",
+              background: "transparent",
+              border: "1px solid var(--border)",
+              borderRadius: 8,
+              padding: "6px 10px",
+              cursor: "pointer",
+              color: "var(--text)",
+              display: "none",
             }}
-          />
-          <span
-            className="block w-5 h-0.5 mb-1 transition-all"
-            style={{
-              backgroundColor: "currentColor",
-              opacity: open ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-5 h-0.5 transition-all"
-            style={{
-              backgroundColor: "currentColor",
-              transform: open ? "rotate(-45deg) translate(3px,-3px)" : "none",
-            }}
-          />
-        </button>
-      </nav>
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              {open ? (
+                <path d="M3 3L13 13M13 3L3 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              ) : (
+                <>
+                  <rect x="2" y="4" width="12" height="1.5" rx="0.75"/>
+                  <rect x="2" y="7.25" width="12" height="1.5" rx="0.75"/>
+                  <rect x="2" y="10.5" width="12" height="1.5" rx="0.75"/>
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
 
-      {/* Mobile menu */}
+      {/* Mobile drawer */}
       {open && (
-        <div
+        <nav
+          aria-label="Mobile navigation"
           style={{
             borderTop: "1px solid var(--border)",
-            backgroundColor: "var(--surface)",
+            background: "var(--bg)",
+            padding: "16px 24px 24px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
           }}
-          className="md:hidden"
         >
-          <ul className="px-6 py-4 flex flex-col gap-1" role="list">
-            {links.map((l) => {
-              const active = pathname === l.href;
-              return (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    style={{
-                      color: active ? "var(--gold)" : "var(--text)",
-                      fontSize: "1rem",
-                      padding: "0.625rem 0",
-                      display: "block",
-                      borderBottom: "1px solid var(--border)",
-                    }}
-                    aria-current={active ? "page" : undefined}
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              );
-            })}
-            <li className="pt-3">
+          {links.map(({ href, label }) => {
+            const active = pathname === href;
+            return (
               <Link
-                href="/contact"
+                key={href}
+                href={href}
                 onClick={() => setOpen(false)}
-                className="block text-center font-semibold py-3 px-4 rounded-lg"
-                style={{ background: "var(--gold)", color: "#000" }}
+                style={{
+                  padding: "12px 16px",
+                  borderRadius: 12,
+                  fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+                  fontSize: 13,
+                  fontWeight: active ? 600 : 400,
+                  color: active ? "var(--gold-light)" : "var(--text-secondary)",
+                  textDecoration: "none",
+                  background: active ? "rgba(201,162,39,0.08)" : "transparent",
+                }}
               >
-                Discuss a project
+                {label}
               </Link>
-            </li>
-          </ul>
-        </div>
+            );
+          })}
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className="btn-primary"
+            style={{ marginTop: 12, justifyContent: "center" }}
+          >
+            Start a Conversation
+          </Link>
+        </nav>
       )}
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hidden-mobile { display: none !important; }
+          .show-mobile   { display: flex !important; }
+        }
+      `}</style>
     </header>
   );
 }

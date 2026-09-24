@@ -1,116 +1,124 @@
 import Link from "next/link";
 
-const navGroups = [
-  {
-    label: "Company",
-    links: [
-      { href: "/how-it-works", label: "How It Works" },
-      { href: "/foundry-os", label: "Foundry OS" },
-      { href: "/founder", label: "Founder" },
-    ],
-  },
-  {
-    label: "Engage",
-    links: [
-      { href: "/mobs", label: "The 12 Mobs" },
-      { href: "/partner-invest", label: "Partner / Invest" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
-  {
-    label: "Ecosystem",
-    links: [
-      {
-        href: "https://majordreamwilliams.com",
-        label: "majordreamwilliams.com",
-        ext: true,
-        note: "(verify before visiting)",
-      },
-      {
-        href: "https://majoraimindset.com",
-        label: "Major AI Mindset",
-        ext: true,
-        note: "(verify before visiting)",
-      },
-    ],
-  },
-];
+const links = {
+  Company: [
+    { href: "/how-it-works",   label: "How It Works" },
+    { href: "/mobs",           label: "The 12 Mobs" },
+    { href: "/foundry-os",     label: "Foundry OS" },
+    { href: "/founder",        label: "Founder" },
+  ],
+  Connect: [
+    { href: "/partner-invest", label: "Partner & Invest" },
+    { href: "/contact",        label: "Contact" },
+  ],
+};
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer
+      role="contentinfo"
       style={{
         borderTop: "1px solid var(--border)",
-        backgroundColor: "var(--surface)",
+        background: "var(--bg)",
+        padding: "64px 0 32px",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="container">
+        {/* Top row */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto auto",
+            gap: 48,
+            marginBottom: 48,
+          }}
+        >
           {/* Brand */}
-          <div className="md:col-span-1">
-            <Link href="/" className="block mb-4">
+          <div style={{ maxWidth: 340 }}>
+            <Link
+              href="/"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+                textDecoration: "none",
+                marginBottom: 16,
+              }}
+              aria-label="AMA Solutions Corp"
+            >
               <span
                 style={{
-                  color: "var(--gold)",
-                  fontWeight: 800,
-                  fontSize: "1.5rem",
-                  letterSpacing: "-0.02em",
+                  width: 28,
+                  height: 28,
+                  borderRadius: 6,
+                  background: "var(--gold)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
                 }}
               >
-                AMA
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1L13 12H1L7 1Z" fill="#080808" />
+                </svg>
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-display, Inter, sans-serif)",
+                  fontWeight: 600,
+                  fontSize: 15,
+                  color: "var(--text)",
+                }}
+              >
+                AMA Solutions Corp
               </span>
             </Link>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.875rem", lineHeight: "1.7" }}>
-              AMA Solutions Corp — Delaware C Corporation. Agentic venture-building and delivery.
-            </p>
             <p
-              className="mt-4 text-xs"
               style={{
-                color: "var(--text-dim)",
-                padding: "0.5rem 0.75rem",
-                border: "1px solid var(--border)",
-                borderRadius: "6px",
-                lineHeight: "1.5",
+                fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+                fontSize: 13,
+                lineHeight: 1.65,
+                color: "var(--text-secondary)",
+                margin: 0,
               }}
             >
-              Contact routes are placeholders pending configuration.
+              The agent-enabled corporation. 12 specialized Art Mob teams.
+              Human accountability throughout.
             </p>
           </div>
 
-          {/* Nav groups */}
-          {navGroups.map((group) => (
-            <div key={group.label}>
-              <h3
+          {/* Link columns */}
+          {Object.entries(links).map(([group, items]) => (
+            <div key={group}>
+              <p
+                className="label-mono"
                 style={{
                   color: "var(--text-dim)",
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  marginBottom: "1rem",
+                  marginBottom: 16,
+                  margin: "0 0 16px",
                 }}
               >
-                {group.label}
-              </h3>
-              <ul className="flex flex-col gap-2" role="list">
-                {group.links.map((l) => (
-                  <li key={l.href}>
-                    {"ext" in l && l.ext ? (
-                      <span style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>
-                        {l.label}{" "}
-                        <span style={{ color: "var(--text-dim)", fontSize: "0.75rem" }}>
-                          {l.note}
-                        </span>
-                      </span>
-                    ) : (
-                      <Link
-                        href={l.href}
-                        style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}
-                        className="hover:text-white transition-colors"
-                      >
-                        {l.label}
-                      </Link>
-                    )}
+                {group}
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {items.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      style={{
+                        fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+                        fontSize: 13,
+                        color: "var(--text-secondary)",
+                        textDecoration: "none",
+                        transition: "color 150ms ease",
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+                    >
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -118,15 +126,46 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="divider" style={{ marginBottom: 24 }} />
+
+        {/* Bottom row */}
         <div
-          className="mt-12 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
-          style={{ borderTop: "1px solid var(--border)" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 12,
+          }}
         >
-          <p style={{ color: "var(--text-dim)", fontSize: "0.8125rem" }}>
-            © {new Date().getFullYear()} AMA Solutions Corp. All rights reserved.
+          <p
+            style={{
+              fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+              fontSize: 12,
+              color: "var(--text-dim)",
+              margin: 0,
+            }}
+          >
+            © {year} AMA Solutions Corporation. Delaware C-Corp.
           </p>
-          <p style={{ color: "var(--text-dim)", fontSize: "0.8125rem" }}>
-            Intended domain: amasolagi.com — deployment pending
+          <p
+            style={{
+              fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+              fontSize: 12,
+              color: "var(--text-dim)",
+              margin: 0,
+              textAlign: "right",
+            }}
+          >
+            Not a securities offering.{" "}
+            <Link
+              href="/contact"
+              style={{ color: "var(--gold-dim)", textDecoration: "none" }}
+            >
+              Contact us
+            </Link>{" "}
+            for partnership inquiries.
           </p>
         </div>
       </div>

@@ -1,290 +1,201 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "How It Works",
   description:
-    "AMA Solutions Corp's operating model: how AMA, HAMAL, the 12 Art Mob teams, Hanzo, Lux, and Foundry OS work together.",
+    "AMA Solutions Corp scopes work, assigns it to the right Art Mob, and delivers with human review at every stage. One corporation, accountable end to end.",
   path: "/how-it-works",
 });
 
-const layers = [
+const steps = [
   {
-    number: "01",
-    name: "AMA Solutions Corp",
-    role: "The corporation",
-    desc: "AMA Solutions Corp is the Delaware C corporation, public commercial front door, and intended investment vehicle. It owns client relationships, enters contracts when appropriate, and creates the legal and financial structure for the company's work. Strategic partners, investors, and clients engage AMA directly.",
-    status: "Active",
-    statusColor: "#22C55E",
-    detail: [
-      "Delaware C corporation — incorporated and legally structured",
-      "Client relationship owner and contracting entity",
-      "Primary point of contact for strategic and investment conversations",
-      "Umbrella for the Art Mob delivery network",
-    ],
+    n: "01",
+    title: "Discovery & Scoping",
+    body: "Every engagement starts with a conversation. We understand the challenge, define scope, and identify which Mob or combination of Mobs is right for the work. No guesswork. No oversell.",
   },
   {
-    number: "02",
-    name: "HAMAL",
-    role: "The coordination layer",
-    desc: "HAMAL is the top coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux. It develops and maintains shared context, playbooks, and orchestration standards that equip the 12 Art Mob delivery teams. HAMAL is the nervous system that helps the Mobs share learning and operate with consistent quality.",
-    status: "Active",
-    statusColor: "#22C55E",
-    detail: [
-      "Maintains playbooks, standards, and shared operational context",
-      "Coordinates between Hanzo capabilities, AMA structure, and Lux infrastructure",
-      "Supports learning feedback from delivery back into the system",
-      "Clients engage the Mob teams; HAMAL equips them",
-    ],
+    n: "02",
+    title: "Mob Assignment",
+    body: "Work is routed to the domain-specific Art Mob — or a cross-Mob team when the project calls for it. Each Mob has 12 designed positions with clear ownership.",
   },
   {
-    number: "03",
-    name: "The 12 Art Mob Teams",
-    role: "Client-facing delivery",
-    desc: "The 12 Art Mob teams are the client-facing delivery units. The design envisions 144 Art Mob AGINT positions distributed across 12 Mobs — 12 designed positions per Mob. A client can engage a full Mob or a relevant portion, depending on the scope. Each Mob has a distinct capability focus, toolset concept, and campus district character.",
-    status: "In development",
-    statusColor: "#C9A227",
-    detail: [
-      "12 specialized teams, each with a distinct capability focus",
-      "144 designed AGINT positions — 12 per Mob (deployment roster not yet verified)",
-      "Clients scope a Mob or portion of one for defined engagements",
-      "Human review and accountability are part of every delivery",
-    ],
+    n: "03",
+    title: "Agent-Enabled Execution",
+    body: "The Mob executes using agent-enabled workflows. This accelerates throughput, handles repetitive tasks, and allows the team to focus on judgment-dependent work.",
   },
   {
-    number: "04",
-    name: "Hanzo",
-    role: "AI and technical capabilities",
-    desc: "Hanzo contributes AI and technical capabilities to the HAMAL architecture. Where Hanzo is specifically involved in a client engagement, that will be noted for that project. Do not assume Hanzo capabilities are part of every AMA engagement unless confirmed for a specific scope.",
-    status: "Capability — verify per project",
-    statusColor: "#8899BB",
-    detail: [
-      "AI infrastructure and autonomous agent capabilities",
-      "Contributes to HAMAL coordination architecture where applicable",
-      "Involvement is project-specific, not universal",
-    ],
+    n: "04",
+    title: "Human Review",
+    body: "Humans review all substantive outputs before delivery. AMA Solutions Corp maintains accountability for quality. Clients get a single point of contact throughout.",
   },
   {
-    number: "05",
-    name: "Lux",
-    role: "Sovereignty and provenance infrastructure",
-    desc: "Lux contributes sovereignty, provenance, or related infrastructure where applicable to the HAMAL architecture. Lux's role in any specific engagement should be confirmed before being presented as a feature of that project.",
-    status: "Capability — verify per project",
-    statusColor: "#8899BB",
-    detail: [
-      "Sovereignty and provenance infrastructure",
-      "Contributes to HAMAL architecture where relevant",
-      "Involvement is project-specific, not universal",
-    ],
+    n: "05",
+    title: "Delivery & Iteration",
+    body: "Deliverables go to the client with context, documentation, and next-step recommendations. Ongoing engagements iterate from there.",
   },
-  {
-    number: "06",
-    name: "Foundry OS",
-    role: "Operating system in development",
-    desc: "Foundry OS is an operating system in development intended to make agent-enabled work modular, operational, and eventually licensable. It is not yet a generally available product. The longer-term vision includes making parts of the system licensable to other organizations.",
-    status: "In development",
-    statusColor: "#C9A227",
-    detail: [
-      "Modular operating system for coordinating agent-enabled work",
-      "Currently in development — not yet a generally available product",
-      "Longer-term goal includes licensing the system to other organizations",
-      "Built from AMA's operational experience across the Mob network",
-    ],
-  },
+];
+
+const principles = [
+  { icon: "◈", title: "One Corporation", body: "AMA Solutions Corp is the contracting entity. Not a freelancer network. Not a platform. A corporation with a Delaware C-Corp structure and defined governance." },
+  { icon: "⬡", title: "Domain Depth", body: "Each Mob focuses on one discipline. Clients get specialists, not generalists trying to cover everything." },
+  { icon: "△", title: "Human Accountability", body: "Agent-enabled doesn't mean autonomous. Human reviewers are part of the process at every meaningful stage." },
+  { icon: "○", title: "Transparent Scope", body: "We scope before we start. Clients know what they're getting, who's doing it, and what it costs before work begins." },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      <div style={{ paddingTop: "80px" }} />
-
-      {/* Page header */}
+      {/* ── HERO ────────────────────────────────────────────────────── */}
       <section
-        className="py-16 md:py-24"
-        style={{ borderBottom: "1px solid var(--border)" }}
-        aria-labelledby="page-heading"
+        style={{
+          paddingTop: 140,
+          paddingBottom: 80,
+          borderBottom: "1px solid var(--border)",
+          background: "var(--bg)",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold)" }}
-          >
-            The operating model
+        <div className="grid-overlay" style={{ opacity: 0.1 }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <p className="label-mono" style={{ color: "var(--gold)", marginBottom: 20, margin: "0 0 20px" }}>
+            The Model
           </p>
           <h1
-            id="page-heading"
-            className="font-bold mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em" }}
+            className="display-lg"
+            style={{ color: "var(--text)", maxWidth: 720, margin: "0 0 24px" }}
           >
-            How It Works
+            Scope, assign, deliver — with accountability at every step
           </h1>
           <p
-            className="max-w-2xl text-lg"
-            style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
+            className="body-mono"
+            style={{ color: "var(--text-secondary)", maxWidth: 560, margin: "0 0 36px" }}
           >
-            AMA Solutions operates through a layered architecture. The corporation sits at the
-            front. HAMAL coordinates the network. Twelve specialized Art Mob teams do client
-            work. Foundry OS is being built to make this model modular and eventually licensable.
+            AMA Solutions Corp isn&apos;t a marketplace or a matchmaking layer. We are the
+            delivery entity — coordinating the right Mob for each engagement, maintaining
+            human review throughout, and standing behind every deliverable.
           </p>
+          <Link href="/contact" className="btn-primary">
+            Start a Conversation
+          </Link>
         </div>
       </section>
 
-      {/* System diagram — text-based for accessibility */}
-      <section
-        className="py-16"
-        style={{ borderBottom: "1px solid var(--border)", background: "var(--surface)" }}
-        aria-label="System overview diagram"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-stretch gap-3 overflow-x-auto pb-2">
-            {[
-              { label: "AMA Corp", sub: "Front door + contracts", col: "var(--gold)" },
-              { label: "↔", sub: "", col: "var(--text-dim)", plain: true },
-              { label: "HAMAL", sub: "Coordination + playbooks", col: "#60A5FA" },
-              { label: "↔", sub: "", col: "var(--text-dim)", plain: true },
-              { label: "12 Art Mobs", sub: "Client delivery", col: "#A78BFA" },
-              { label: "+", sub: "", col: "var(--text-dim)", plain: true },
-              { label: "Hanzo / Lux", sub: "Technical capabilities", col: "var(--text-muted)" },
-              { label: "→", sub: "", col: "var(--text-dim)", plain: true },
-              { label: "Foundry OS", sub: "In development", col: "var(--gold)" },
-            ].map((item, i) =>
-              item.plain ? (
-                <div
-                  key={i}
-                  className="hidden md:flex items-center justify-center px-1"
-                  style={{ color: item.col, fontSize: "1.25rem" }}
-                  aria-hidden="true"
-                >
-                  {item.label}
-                </div>
-              ) : (
-                <div
-                  key={i}
-                  className="flex-1 min-w-[140px] p-4 rounded-xl text-center"
-                  style={{ background: "var(--bg)", border: `1px solid ${item.col}30` }}
-                >
-                  <p className="font-bold text-sm" style={{ color: item.col }}>
-                    {item.label}
-                  </p>
-                  {item.sub && (
-                    <p className="text-xs mt-1" style={{ color: "var(--text-dim)" }}>
-                      {item.sub}
-                    </p>
-                  )}
-                </div>
-              )
-            )}
-          </div>
-          <p className="text-xs mt-4 text-center" style={{ color: "var(--text-dim)" }}>
-            Conceptual overview — not a live system diagram
-          </p>
-        </div>
-      </section>
-
-      {/* Detailed layer explanations */}
-      <section className="py-16" aria-label="Layer details">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col gap-8">
-            {layers.map((layer) => (
-              <article
-                key={layer.number}
-                className="grid md:grid-cols-12 gap-6 p-6 md:p-8 rounded-2xl"
-                style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
-                aria-labelledby={`layer-${layer.number}`}
+      {/* ── STEPS ───────────────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container">
+          <h2 className="display-md" style={{ color: "var(--text)", marginBottom: 48, margin: "0 0 48px", maxWidth: 480 }}>
+            How an engagement runs
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            {steps.map(({ n, title, body }, i) => (
+              <div
+                key={n}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "80px 1fr",
+                  gap: 32,
+                  padding: "32px 0",
+                  borderBottom: i < steps.length - 1 ? "1px solid var(--border)" : "none",
+                  alignItems: "flex-start",
+                }}
               >
-                <div className="md:col-span-3">
-                  <span
-                    className="text-4xl font-black"
-                    style={{ color: "var(--border)" }}
-                    aria-hidden="true"
-                  >
-                    {layer.number}
-                  </span>
-                  <h2
-                    id={`layer-${layer.number}`}
-                    className="font-bold text-xl mt-2 mb-1"
-                  >
-                    {layer.name}
-                  </h2>
-                  <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
-                    {layer.role}
-                  </p>
-                  <span
-                    className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full"
+                <span
+                  style={{
+                    fontFamily: "var(--font-display, Inter, sans-serif)",
+                    fontSize: 40,
+                    fontWeight: 500,
+                    color: "var(--gold)",
+                    lineHeight: 1,
+                    opacity: 0.5,
+                  }}
+                >
+                  {n}
+                </span>
+                <div>
+                  <h3
                     style={{
-                      color: layer.statusColor,
-                      border: `1px solid ${layer.statusColor}`,
-                      background: `${layer.statusColor}18`,
+                      fontFamily: "var(--font-display, Inter, sans-serif)",
+                      fontSize: 22,
+                      fontWeight: 500,
+                      color: "var(--text)",
+                      margin: "0 0 12px",
                     }}
                   >
-                    {layer.status}
-                  </span>
-                </div>
-
-                <div className="md:col-span-5">
-                  <p style={{ color: "var(--text-muted)", lineHeight: "1.8", fontSize: "0.9375rem" }}>
-                    {layer.desc}
+                    {title}
+                  </h3>
+                  <p className="body-mono" style={{ color: "var(--text-secondary)", margin: 0 }}>
+                    {body}
                   </p>
                 </div>
-
-                <div className="md:col-span-4">
-                  <ul className="flex flex-col gap-2" role="list">
-                    {layer.detail.map((d) => (
-                      <li
-                        key={d}
-                        className="flex items-start gap-2 text-sm"
-                        style={{ color: "var(--text-muted)" }}
-                      >
-                        <span style={{ color: "var(--gold)", marginTop: "0.25rem", flexShrink: 0 }}>
-                          ›
-                        </span>
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Human accountability note */}
+      {/* ── PRINCIPLES ──────────────────────────────────────────────── */}
       <section
-        className="py-16"
-        style={{ borderTop: "1px solid var(--border)", background: "var(--surface)" }}
-        aria-labelledby="human-note"
+        className="section"
+        style={{ background: "var(--surface)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
       >
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            id="human-note"
-            className="font-bold text-2xl mb-4"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Human scoping, review, and accountability
+        <div className="container">
+          <h2 className="display-md" style={{ color: "var(--text)", marginBottom: 40, margin: "0 0 40px" }}>
+            Design principles
           </h2>
-          <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-6">
-            AMA Solutions does not operate as a fully autonomous AI system. Human review,
-            client communication, scoping, and accountability are part of every engagement.
-            Agent capabilities support and accelerate the work; humans remain responsible for
-            decisions, quality, and outcomes.
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 16,
+            }}
+          >
+            {principles.map(({ icon, title, body }) => (
+              <div key={title} className="card card-gold">
+                <div
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 8,
+                    background: "var(--gold-glow)",
+                    border: "1px solid rgba(201,162,39,0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 16,
+                    marginBottom: 16,
+                    color: "var(--gold)",
+                  }}
+                  aria-hidden="true"
+                >
+                  {icon}
+                </div>
+                <h3 style={{ fontFamily: "var(--font-display, Inter, sans-serif)", fontSize: 17, fontWeight: 500, color: "var(--text)", margin: "0 0 10px" }}>
+                  {title}
+                </h3>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 14, margin: 0 }}>
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ─────────────────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 className="display-md" style={{ color: "var(--text)", margin: "0 0 16px" }}>
+            Ready to bring a challenge?
+          </h2>
+          <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 32px" }}>
+            We scope before we start. Tell us what you&apos;re working on.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/mobs"
-              className="font-semibold px-6 py-3 rounded-lg text-sm"
-              style={{ background: "var(--gold)", color: "#000" }}
-            >
-              Explore the Mobs
-            </Link>
-            <Link
-              href="/contact"
-              className="font-semibold px-6 py-3 rounded-lg text-sm"
-              style={{ border: "1px solid var(--border)", color: "var(--text)" }}
-            >
-              Start a conversation
-            </Link>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/contact" className="btn-primary">Start a Conversation</Link>
+            <Link href="/mobs" className="btn-secondary">Explore the Mobs</Link>
           </div>
         </div>
       </section>

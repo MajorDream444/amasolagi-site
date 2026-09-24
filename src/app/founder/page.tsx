@@ -1,210 +1,220 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "Founder",
   description:
-    "Major Dream Williams — founder of AMA Solutions Corp. Background, driving conviction, and the company's origin.",
+    "Major Dream Williams is the founder of AMA Solutions Corp — building the agentic delivery corporation at the intersection of AI, business systems, and human accountability.",
   path: "/founder",
 });
 
 export default function FounderPage() {
   return (
     <>
-      <div style={{ paddingTop: "80px" }} />
-
-      {/* Header */}
+      {/* ── HERO ────────────────────────────────────────────────────── */}
       <section
-        className="py-16 md:py-24"
-        style={{ borderBottom: "1px solid var(--border)" }}
-        aria-labelledby="founder-heading"
+        style={{
+          paddingTop: 140,
+          paddingBottom: 80,
+          borderBottom: "1px solid var(--border)",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold)" }}
-          >
-            Company founder
+        <div className="grid-overlay" style={{ opacity: 0.1 }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <p className="label-mono" style={{ color: "var(--gold)", margin: "0 0 20px" }}>
+            Leadership
           </p>
-          <h1
-            id="founder-heading"
-            className="font-bold mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em" }}
-          >
+          <h1 className="display-lg" style={{ color: "var(--text)", maxWidth: 600, margin: "0 0 24px" }}>
             Major Dream Williams
           </h1>
-          <p
-            className="max-w-2xl text-lg"
-            style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
-          >
-            Founder and chief architect of AMA Solutions Corp. This page is a company-relevant
-            introduction — for Major’s broader work, writing, and personal journey, visit{" "}
-            <span style={{ color: "var(--text-dim)" }}>
-              majordreamwilliams.com{" "}
-              <span style={{ fontSize: "0.75rem" }}>(verify before visiting)</span>
-            </span>
-            .
+          <p className="body-mono" style={{ color: "var(--text-secondary)", maxWidth: 480, margin: "0 0 16px" }}>
+            Founder &amp; CEO, AMA Solutions Corp
           </p>
+          <span className="badge badge-gold" style={{ marginTop: 8 }}>
+            Delaware C-Corp Founder
+          </span>
         </div>
       </section>
 
-      {/* Bio */}
-      <section className="py-16 md:py-20" style={{ borderBottom: "1px solid var(--border)" }} aria-labelledby="bio-heading">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
-            {/* Name card */}
-            <div className="md:col-span-3">
-              <div
-                className="p-6 rounded-2xl"
-                style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
-              >
-                <div
-                  className="w-16 h-16 rounded-2xl mb-4 flex items-center justify-center font-black text-2xl"
-                  style={{ background: "rgba(201,162,39,0.12)", color: "var(--gold)" }}
-                  aria-hidden="true"
+      {/* ── BIO ─────────────────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "flex-start" }}>
+            <div>
+              <div className="gold-line" style={{ marginBottom: 28 }} />
+              <h2 className="display-md" style={{ color: "var(--text)", margin: "0 0 24px", maxWidth: 400 }}>
+                Building the corporation for the agentic era
+              </h2>
+              <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 16px" }}>
+                Major Dream Williams founded AMA Solutions Corp as the agentic delivery
+                corporation — a structured, accountable entity through which 12 Art Mob teams
+                deliver real work to clients in the age of AI.
+              </p>
+              <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 16px" }}>
+                The thesis: AI-enabled work needs a corporation, not just tools. AMA is
+                the commercial front door — contracting, accountability, and delivery
+                all flowing through one entity, with humans reviewing what matters throughout.
+              </p>
+              <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 32px" }}>
+                Major is also the author of{" "}
+                <em style={{ color: "var(--text)" }}>10 Pillars of the Major AI Mindset</em>{" "}
+                and founder of Major AI Mindset (MAIM) — an AI education initiative.
+                AMA is the corporate vehicle; MAIM is the education brand.
+                Both are separate entities with separate purposes.
+              </p>
+
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link href="/contact" className="btn-primary">
+                  Reach Out
+                </Link>
+                <a
+                  href="https://majordreamwilliams.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
                 >
-                  MD
-                </div>
-                <p className="font-bold text-lg mb-0.5">Major Dream Williams</p>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>
-                  Founder, AMA Solutions Corp
-                </p>
+                  Personal Site ↗
+                </a>
               </div>
             </div>
 
-            {/* Bio text */}
-            <div className="md:col-span-9">
-              <h2
-                id="bio-heading"
-                className="font-bold text-2xl mb-6"
-                style={{ letterSpacing: "-0.02em" }}
-              >
-                Why AMA Solutions Corp exists
-              </h2>
-
-              <div
-                className="flex flex-col gap-4"
-                style={{ color: "var(--text-muted)", lineHeight: "1.85", fontSize: "1rem" }}
-              >
-                <p>
-                  Major Dream Williams built AMA Solutions Corp around a specific conviction: that
-                  agent-enabled work isn’t just about efficiency — it’s about ownership. Too often,
-                  the tools and systems that could let ambitious people build lasting value are
-                  locked behind institutions that extract more than they return.
-                </p>
-                <p>
-                  AMA is built to be the opposite. A corporation structured for accountability,
-                  capable of delivering meaningful work through a network of specialized teams, and
-                  designed from the start to create ownership — for clients, partners, and
-                  collaborators — not just revenue for the entity at the top.
-                </p>
-                <p>
-                  The 12 Art Mob delivery model, the HAMAL coordination layer, and the long-term
-                  Foundry OS effort all point at the same goal: a company that can run at scale
-                  with human accountability baked in, not bolted on.
-                </p>
-                <p>
-                  AMA Solutions Corp is a Delaware C corporation — the legal and financial
-                  structure is real. The delivery network is in development. The conviction
-                  behind it has been tested through Major’s prior work across athletics,
-                  community building, and technology, and it informs every design decision in
-                  the company.
-                </p>
-              </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {[
+                { label: "Entity", value: "AMA Solutions Corporation" },
+                { label: "Structure", value: "Delaware C-Corp" },
+                { label: "Role", value: "Founder & CEO" },
+                { label: "Delivery model", value: "12 Art Mob teams" },
+                { label: "Education brand", value: "Major AI Mindset (separate)" },
+                { label: "Personal site", value: "majordreamwilliams.com" },
+              ].map(({ label, value }) => (
+                <div
+                  key={label}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "14px 20px",
+                    background: "var(--surface)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 12,
+                    gap: 16,
+                  }}
+                >
+                  <span className="label-mono" style={{ color: "var(--text-dim)", flexShrink: 0 }}>
+                    {label}
+                  </span>
+                  <span style={{ fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)", fontSize: 13, color: "var(--text)", textAlign: "right" }}>
+                    {value}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Related ventures */}
+      {/* ── BRAND CLARITY ───────────────────────────────────────────── */}
       <section
-        className="py-16"
-        style={{ borderBottom: "1px solid var(--border)", background: "var(--surface)" }}
-        aria-labelledby="broader-work"
+        className="section"
+        style={{ background: "var(--surface)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold)" }}
-          >
-            Broader work
-          </p>
-          <h2
-            id="broader-work"
-            className="font-bold text-xl mb-6"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Major’s other work is intentionally separate from AMA
+        <div className="container">
+          <h2 className="display-md" style={{ color: "var(--text)", margin: "0 0 32px", maxWidth: 480 }}>
+            Three brands, one founder
           </h2>
-
-          <p className="max-w-2xl mb-8" style={{ color: "var(--text-muted)", lineHeight: "1.8" }}>
-            Major’s broader journey, doctrine, books, and cross-venture thinking live at
-            majordreamwilliams.com. AI education and curriculum belong to Major AI Mindset.
-            This site is the AMA corporate presence — client relationships, investment conversations,
-            partnerships, and delivery. The brands are kept distinct deliberately.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-4 max-w-2xl">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
             {[
               {
-                label: "majordreamwilliams.com",
-                desc: "Major's personal site — broader journey, writing, and cross-venture work.",
-                note: "Verify domain before visiting",
+                name: "AMA Solutions Corp",
+                role: "You are here",
+                desc: "The corporation. Client delivery, investment vehicle, Mob coordination.",
+                current: true,
               },
               {
-                label: "Major AI Mindset",
-                desc: "AI education, learning resources, and curriculum.",
-                note: "majoraimindset.com — verify before visiting",
+                name: "Major AI Mindset",
+                role: "Education brand",
+                desc: "AI education, courses, curriculum. Separate from AMA's commercial work.",
+                current: false,
+                href: "https://majoraimindset.com",
               },
-            ].map((item) => (
+              {
+                name: "majordreamwilliams.com",
+                role: "Personal brand",
+                desc: "Major's broader journey, doctrine, speaking, and cross-venture work.",
+                current: false,
+                href: "https://majordreamwilliams.com",
+              },
+            ].map(({ name, role, desc, current, href }) => (
               <div
-                key={item.label}
-                className="p-5 rounded-xl"
-                style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
+                key={name}
+                className="card"
+                style={{
+                  borderColor: current ? "rgba(201,162,39,0.3)" : "var(--border)",
+                  background: current ? "rgba(201,162,39,0.04)" : "var(--bg)",
+                }}
               >
-                <p className="font-semibold text-sm mb-1">{item.label}</p>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.8125rem", lineHeight: "1.5" }}>
-                  {item.desc}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-display, Inter, sans-serif)",
+                      fontSize: 15,
+                      fontWeight: 500,
+                      color: "var(--text)",
+                    }}
+                  >
+                    {name}
+                  </span>
+                  <span
+                    className="badge"
+                    style={{
+                      background: current ? "rgba(201,162,39,0.1)" : "var(--surface)",
+                      border: current ? "1px solid rgba(201,162,39,0.3)" : "1px solid var(--border)",
+                      color: current ? "var(--gold-light)" : "var(--text-dim)",
+                      fontSize: 10,
+                    }}
+                  >
+                    {role}
+                  </span>
+                </div>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
+                  {desc}
                 </p>
-                <p className="text-xs mt-2" style={{ color: "var(--text-dim)", fontStyle: "italic" }}>
-                  {item.note}
-                </p>
+                {href && (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      marginTop: 12,
+                      fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+                      fontSize: 12,
+                      color: "var(--text-dim)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Visit ↗
+                  </a>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16" aria-labelledby="founder-cta">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            id="founder-cta"
-            className="font-bold text-2xl mb-4"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Connect with AMA Solutions Corp
+      {/* ── CTA ─────────────────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 className="display-md" style={{ color: "var(--text)", margin: "0 0 16px" }}>
+            Ready to work together?
           </h2>
-          <p className="mb-6" style={{ color: "var(--text-muted)" }}>
-            For strategic, investment, or client conversations, reach AMA through the contact page.
+          <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 32px" }}>
+            Start a conversation about your challenge, a partnership, or an investment inquiry.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/partner-invest"
-              className="font-semibold px-6 py-3 rounded-lg text-sm"
-              style={{ background: "var(--gold)", color: "#000" }}
-            >
-              Partner or invest
-            </Link>
-            <Link
-              href="/contact"
-              className="font-semibold px-6 py-3 rounded-lg text-sm"
-              style={{ border: "1px solid var(--border)", color: "var(--text)" }}
-            >
-              Get in touch
-            </Link>
-          </div>
+          <Link href="/contact" className="btn-primary">Start a Conversation</Link>
         </div>
       </section>
     </>
