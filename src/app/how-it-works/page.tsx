@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "How It Works",
   description:
     "AMA Solutions Corp's operating model: how AMA, HAMAL, the 12 Art Mob teams, Hanzo, Lux, and Foundry OS work together.",
-};
+  path: "/how-it-works",
+});
 
 const layers = [
   {

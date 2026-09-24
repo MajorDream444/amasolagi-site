@@ -1,11 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "AMA Solutions Corp — Agentic Venture-Building and Delivery",
   description:
     "AMA Solutions Corp brings people, specialized agent teams, technical capabilities, and operating playbooks together to turn ambitious ideas into scoped, reviewable work.",
-};
+  path: "/",
+  absoluteTitle: true,
+});
 
 const mobPreviews = [
   { name: "Avant-Garde", tagline: "Futures Lab", focus: "Innovation strategy, emerging trends" },

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Foundry OS",
   description:
     "Foundry OS — AMA Solutions Corp's modular operating system in development for agent-enabled work, with licensing as a longer-term goal.",
-};
+  path: "/foundry-os",
+});
 
 const pillars = [
   {

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Founder",
   description:
     "Major Dream Williams — founder of AMA Solutions Corp. Background, driving conviction, and the company's origin.",
-};
+  path: "/founder",
+});
 
 export default function FounderPage() {
   return (

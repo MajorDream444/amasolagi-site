@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "The 12 Art Mob Teams",
   description:
     "AMA Solutions' 12 Art Mob teams — 144 designed AGINT positions across specialized capability areas from innovation strategy to reputation management.",
-};
+  path: "/mobs",
+});
 
 const mobs = [
   {
