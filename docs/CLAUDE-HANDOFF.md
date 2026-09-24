@@ -62,11 +62,8 @@ Do not treat the external agent library as AMA’s approved roster. Do not move 
 8. Record material content and architecture decisions in this repo.
 9. Run the checks appropriate to the selected stack and report what passed.
 
-## First task
+## Build kickoff
 
-Inspect the repository and report:
-- current branch and file structure
-- the best minimal website implementation plan
-- any owner decisions needed before launch
+Use [docs/COWORK-STARTER.md](COWORK-STARTER.md) for the copy-paste project description and first implementation prompt. Inspect the repository and preserve existing work, then proceed to build the first complete front-end version. Do not stop at a planning-only report. Choose a simple stack only after inspection, document the choice, implement the pages in the site map, and run the relevant checks.
 
-Do not start a speculative backend or claim the site is live.
+Keep MAIM’s Vercel relaunch and email provisioning as separate workstreams. Do not change DNS, provision mailboxes, create agent email identities, or deploy to production under this website task. Do not claim the site is live until deployment is verified.
