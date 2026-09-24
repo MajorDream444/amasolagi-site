@@ -1,198 +1,154 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 
-const intents = [
-  { value: "project", label: "Client project" },
-  { value: "partner", label: "Strategic partnership" },
-  { value: "invest", label: "Investment inquiry" },
-  { value: "foundry", label: "Foundry OS" },
-  { value: "build", label: "Build with AMA" },
-  { value: "other", label: "Something else" },
-];
+import { useState } from "react";
 
 export default function ContactForm() {
-  const searchParams = useSearchParams();
-  const prefillIntent = searchParams.get("intent") ?? "";
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    org: "",
+    type: "",
+    message: "",
+  });
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    background: "var(--surface)",
+    border: "1px solid var(--border)",
+    borderRadius: 12,
+    padding: "12px 16px",
+    color: "var(--text)",
+    fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+    fontSize: 14,
+    outline: "none",
+    boxSizing: "border-box",
+    transition: "border-color 0.15s",
+  };
+
+  const labelStyle: React.CSSProperties = {
+    display: "block",
+    fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+    fontSize: 11,
+    fontWeight: 600,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase" as const,
+    color: "var(--text-dim)",
+    marginBottom: 6,
+  };
 
   return (
-    <div
-      className="p-8 md:p-10 rounded-2xl"
-      style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+    <form
+      onSubmit={(e) => e.preventDefault()}
+      style={{
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderRadius: "var(--radius-card)",
+        padding: "32px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 20,
+      }}
     >
-      {/* Placeholder notice */}
-      <div
-        className="mb-6 p-4 rounded-xl flex items-start gap-3"
-        style={{
-          background: "rgba(201,162,39,0.07)",
-          border: "1px solid rgba(201,162,39,0.2)",
-        }}
-        role="status"
-      >
-        <span style={{ color: "var(--gold)", flexShrink: 0 }}>⚠</span>
-        <p style={{ color: "var(--text-muted)", fontSize: "0.8125rem", lineHeight: "1.7" }}>
-          <strong style={{ color: "var(--gold)" }}>Form not yet connected.</strong> This form is a
-          placeholder. Submission routes are pending email configuration. Do not send sensitive
-          information here yet. Once delivery is confirmed, this notice will be removed.
-        </p>
+      {/* Name + Email */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div>
+          <label style={labelStyle} htmlFor="cf-name">Name</label>
+          <input
+            id="cf-name"
+            name="name"
+            type="text"
+            required
+            placeholder="Your name"
+            value={form.name}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+        </div>
+        <div>
+          <label style={labelStyle} htmlFor="cf-email">Email</label>
+          <input
+            id="cf-email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@org.com"
+            value={form.email}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+        </div>
       </div>
 
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        aria-label="Contact form (placeholder — not yet active)"
-        noValidate
+      {/* Org */}
+      <div>
+        <label style={labelStyle} htmlFor="cf-org">Organization <span style={{ color: "var(--text-dim)", fontWeight: 400 }}>(optional)</span></label>
+        <input
+          id="cf-org"
+          name="org"
+          type="text"
+          placeholder="Company or project"
+          value={form.org}
+          onChange={handleChange}
+          style={inputStyle}
+        />
+      </div>
+
+      {/* Type */}
+      <div>
+        <label style={labelStyle} htmlFor="cf-type">Inquiry type</label>
+        <select
+          id="cf-type"
+          name="type"
+          required
+          value={form.type}
+          onChange={handleChange}
+          style={{ ...inputStyle, cursor: "pointer" }}
+        >
+          <option value="" disabled>Select one</option>
+          <option value="client">Client inquiry</option>
+          <option value="partner">Strategic partnership</option>
+          <option value="investor">Investor interest</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      {/* Message */}
+      <div>
+        <label style={labelStyle} htmlFor="cf-message">Message</label>
+        <textarea
+          id="cf-message"
+          name="message"
+          required
+          rows={5}
+          placeholder="Tell us what you're working on or what you'd like to discuss."
+          value={form.message}
+          onChange={handleChange}
+          style={{ ...inputStyle, resize: "vertical", minHeight: 120 }}
+        />
+      </div>
+
+      {/* Disclaimer */}
+      <p
+        className="body-mono"
+        style={{ fontSize: 11, color: "var(--text-dim)", margin: 0, lineHeight: 1.5 }}
       >
-        <div className="flex flex-col gap-5">
-          {/* Name */}
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-semibold mb-1.5"
-              style={{ color: "var(--text)" }}
-            >
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autoComplete="name"
-              placeholder="Your full name"
-              className="w-full px-4 py-2.5 rounded-lg text-sm"
-              style={{
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                color: "var(--text)",
-                outline: "none",
-              }}
-            />
-          </div>
+        Submitting this form does not create a contractual relationship or imply
+        engagement. For investment inquiries, this is an informational contact only —
+        not a securities offering.
+      </p>
 
-          {/* Email */}
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold mb-1.5"
-              style={{ color: "var(--text)" }}
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              placeholder="you@organization.com"
-              className="w-full px-4 py-2.5 rounded-lg text-sm"
-              style={{
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                color: "var(--text)",
-                outline: "none",
-              }}
-            />
-          </div>
-
-          {/* Intent */}
-          <div>
-            <label
-              htmlFor="intent"
-              className="block text-sm font-semibold mb-1.5"
-              style={{ color: "var(--text)" }}
-            >
-              What brings you here?
-            </label>
-            <select
-              id="intent"
-              name="intent"
-              defaultValue={prefillIntent}
-              className="w-full px-4 py-2.5 rounded-lg text-sm"
-              style={{
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                color: prefillIntent ? "var(--text)" : "var(--text-muted)",
-                outline: "none",
-              }}
-            >
-              <option value="" disabled>
-                Select one…
-              </option>
-              {intents.map((i) => (
-                <option key={i.value} value={i.value}>
-                  {i.label}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Organization */}
-          <div>
-            <label
-              htmlFor="organization"
-              className="block text-sm font-semibold mb-1.5"
-              style={{ color: "var(--text)" }}
-            >
-              Organization{" "}
-              <span style={{ color: "var(--text-dim)", fontWeight: 400 }}>(optional)</span>
-            </label>
-            <input
-              id="organization"
-              name="organization"
-              type="text"
-              autoComplete="organization"
-              placeholder="Company or organization name"
-              className="w-full px-4 py-2.5 rounded-lg text-sm"
-              style={{
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                color: "var(--text)",
-                outline: "none",
-              }}
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold mb-1.5"
-              style={{ color: "var(--text)" }}
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              placeholder="Tell us what you're thinking about. What problem are you trying to solve? What kind of engagement are you considering? The more context, the better."
-              className="w-full px-4 py-3 rounded-lg text-sm resize-y"
-              style={{
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                color: "var(--text)",
-                outline: "none",
-                minHeight: "120px",
-              }}
-            />
-          </div>
-
-          {/* Submit */}
-          <div>
-            <button
-              type="submit"
-              disabled
-              className="w-full py-3 px-6 rounded-lg font-semibold text-sm opacity-50 cursor-not-allowed"
-              style={{ background: "var(--gold)", color: "#000" }}
-              aria-disabled="true"
-              title="Form submission is not yet active"
-            >
-              Send message (pending activation)
-            </button>
-            <p className="text-xs mt-2 text-center" style={{ color: "var(--text-dim)" }}>
-              Submit is disabled — form routing is not yet configured.
-            </p>
-          </div>
-        </div>
-      </form>
-    </div>
+      <p className="body-mono" style={{ color: "var(--text-dim)", fontSize: 13, margin: 0 }}>
+        The contact form is not connected yet; submitted details are not sent or stored. Email us at{" "}
+        <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+          info@amasolagi.com
+        </a>{" "}or call <a href="tel:+61450461470" style={{ color: "var(--gold)", textDecoration: "none" }}>+61 450 461 470</a>.
+      </p>
+    </form>
   );
 }

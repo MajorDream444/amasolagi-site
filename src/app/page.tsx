@@ -1,252 +1,406 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
+import HeroCanvas from "@/components/HeroCanvas";
 import { pageMetadata } from "@/lib/metadata";
+import { SchemaOrg } from "@/components/SchemaOrg";
 
 export const metadata: Metadata = pageMetadata({
-  title: "AMA Solutions Corp — Agentic Venture-Building and Delivery",
+  title: "AMA Solutions Corp",
   description:
-    "AMA Solutions Corp brings people, specialized agent teams, technical capabilities, and operating playbooks together to turn ambitious ideas into scoped, reviewable work.",
+    "AMA Solutions Corp delivers agentic services through 12 specialized Art Mob teams — the client-facing, accountability-backed corporation for the agentic era.",
   path: "/",
   absoluteTitle: true,
 });
 
-const mobPreviews = [
-  { name: "Avant-Garde", tagline: "Futures Lab", focus: "Innovation strategy, emerging trends" },
-  { name: "Artisans", tagline: "Insight Workshop", focus: "Data analysis, precision, analytics" },
-  { name: "Visionaries", tagline: "Horizon Observatory", focus: "Strategic foresight, long-range planning" },
-  { name: "Innovators", tagline: "Prototype Lab", focus: "Research, product concepts, prototyping" },
-  { name: "Maestros", tagline: "Operations Hall", focus: "Workflow design, process quality" },
-  { name: "Revolutionaries", tagline: "Change Forge", focus: "Transformation, business reinvention" },
-  { name: "Luminaries", tagline: "Leadership House", focus: "Leadership, mentorship, team development" },
-  { name: "Vanguards", tagline: "Trust Gate", focus: "Security, privacy, ethical AI, compliance" },
-  { name: "Provocateurs", tagline: "Campaign Studio", focus: "Campaigns, bold marketing, audience engagement" },
-  { name: "Dreamweavers", tagline: "Story Theater", focus: "Brand narrative, immersive experiences" },
-  { name: "Guardians", tagline: "Reputation Room", focus: "Reputation, crisis response, public relations" },
-  { name: "Strategists", tagline: "Strategy Chamber", focus: "Growth, competitive analysis, market positioning" },
+const mobs = [
+  { id: "01", name: "Avant-Garde Mob", domain: "Innovation & foresight" },
+  { id: "02", name: "Artisans Mob", domain: "Data craft & insight" },
+  { id: "03", name: "Visionaries Mob", domain: "Strategic foresight" },
+  { id: "04", name: "Innovators Mob", domain: "Creative technology" },
+  { id: "05", name: "Maestros Mob", domain: "Orchestration & systems" },
+  { id: "06", name: "Revolutionaries Mob", domain: "Transformative change" },
+  { id: "07", name: "Luminaries Mob", domain: "Mentorship & legacy" },
+  { id: "08", name: "Vanguards Mob", domain: "Security & responsible AI" },
+  { id: "09", name: "Provocateurs Mob", domain: "Bold campaigns & engagement" },
+  { id: "10", name: "Dreamweavers Mob", domain: "Storytelling & experience" },
+  { id: "11", name: "Guardians Mob", domain: "Trust & reputation" },
+  { id: "12", name: "Strategists Mob", domain: "Planning & growth" },
 ];
 
-export default function Home() {
+const valueProps = [
+  {
+    icon: "◈",
+    title: "12 Specialized Teams",
+    body: "The campus model plans for 144 AGINT positions across 12 domain-focused Mobs. Teams are formed around client work with human review and accountability.",
+  },
+  {
+    icon: "⬡",
+    title: "One Corporation",
+    body: "Clients contract with AMA Solutions Corp. One entity. One point of accountability. Consistent standards across every engagement.",
+  },
+  {
+    icon: "△",
+    title: "Built for the Agentic Era",
+    body: "Foundry OS is in development as the operating layer beneath the Mobs — designed for the way AI-enabled work actually runs.",
+  },
+];
+
+export default function HomePage() {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://amasolagi.com/#organization",
+        "name": "AMA Solutions Corp",
+        "url": "https://amasolagi.com",
+        "description": "AMA Solutions Corp delivers agentic services through 12 specialized Art Mob teams — the client-facing, accountability-backed corporation for the agentic era.",
+        "foundingDate": "2024",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://amasolagi.com/contact"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://amasolagi.com/#website",
+        "url": "https://amasolagi.com",
+        "name": "AMA Solutions Corp",
+        "publisher": { "@id": "https://amasolagi.com/#organization" }
+      }
+    ]
+  };
   return (
     <>
-      {/* Hero */}
+      <SchemaOrg schema={orgSchema} />
+      {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section
-        className="relative min-h-screen flex flex-col justify-center"
-        style={{ paddingTop: "80px" }}
-        aria-labelledby="hero-heading"
+        aria-label="Hero"
+        style={{
+          position: "relative",
+          minHeight: "100dvh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          paddingTop: 80,
+          paddingBottom: 80,
+        }}
       >
-        {/* Subtle grid background */}
+        {/* Animated canvas */}
+        <HeroCanvas />
+
+        {/* Subtle grid overlay */}
+        <div className="grid-overlay" style={{ opacity: 0.12 }} />
+
+        {/* Content */}
         <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
+          className="container"
           style={{
-            backgroundImage:
-              "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-            opacity: 0.3,
+            position: "relative",
+            zIndex: 2,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            gap: 32,
           }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,162,39,0.06) 0%, transparent 70%)",
-          }}
-        />
+        >
+          {/* Status badge */}
+          <div className="badge badge-gold anim-fade-in">
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)", display: "inline-block" }} />
+            Delaware C-Corp · Active
+          </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 py-20">
-          <div className="max-w-3xl">
-            {/* Badge */}
-            <div
-              className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase mb-8 px-3 py-1.5 rounded-full"
-              style={{
-                border: "1px solid var(--gold)",
-                color: "var(--gold)",
-                background: "rgba(201,162,39,0.08)",
-              }}
-            >
-              <span
-                className="w-1.5 h-1.5 rounded-full"
-                style={{ background: "var(--gold)" }}
-              />
-              Delaware C Corporation
-            </div>
+          {/* Headline */}
+          <h1
+            className="display-xl anim-fade-up delay-1"
+            style={{
+              color: "var(--text)",
+              maxWidth: 800,
+              margin: 0,
+            }}
+          >
+            The agentic{" "}
+            <span style={{ color: "var(--gold)" }}>delivery</span>
+            {" "}corporation.
+          </h1>
 
-            <h1
-              id="hero-heading"
-              className="font-extrabold leading-tight mb-6"
-              style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)", letterSpacing: "-0.03em" }}
-            >
-              We build systems that turn{" "}
-              <span style={{ color: "var(--gold)" }}>human potential</span> into
-              lasting ownership.
-            </h1>
+          {/* Subheadline */}
+          <p
+            className="body-mono anim-fade-up delay-2"
+            style={{
+              color: "var(--text-secondary)",
+              maxWidth: 560,
+              margin: 0,
+            }}
+          >
+            AMA Solutions Corp coordinates 12 specialized Art Mob teams to deliver
+            agentic services — with human review, clear accountability, and a single
+            corporate entity clients can contract with.
+          </p>
 
-            <p
-              className="text-lg mb-3 max-w-2xl"
-              style={{ color: "var(--text-muted)", lineHeight: "1.75" }}
-            >
-              AMA Solutions Corp is an agentic venture-building and delivery company. We bring
-              people, specialized agent teams, technical capabilities, and operating playbooks
-              together to turn ambitious ideas into scoped, reviewable work.
-            </p>
-            <p
-              className="text-sm mb-10"
-              style={{
-                color: "var(--text-dim)",
-                fontStyle: "italic",
-              }}
-            >
-              Working headline — pending owner approval for final launch copy.
-            </p>
+          {/* CTAs */}
+          <div
+            className="anim-fade-up delay-3"
+            style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}
+          >
+            <Link href="/how-it-works" className="btn-primary">
+              See How It Works
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+            <Link href="/contact" className="btn-secondary">
+              Start a Conversation
+            </Link>
+          </div>
 
-            {/* Three paths */}
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact?intent=build"
-                className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-lg transition-all text-sm"
-                style={{ background: "var(--gold)", color: "#000" }}
-              >
-                Build with us
-                <ArrowRight />
-              </Link>
-              <Link
-                href="/partner-invest#invest"
-                className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-lg transition-all text-sm"
+          {/* Credential strip */}
+          <div
+            className="anim-fade-up delay-4"
+            style={{
+              display: "flex",
+              gap: 32,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              marginTop: 16,
+            }}
+          >
+            {[
+              { value: "12", label: "Art Mob Teams" },
+              { value: "144", label: "Designed Positions" },
+              { value: "1", label: "Corporation" },
+            ].map(({ value, label }) => (
+              <div
+                key={label}
                 style={{
-                  border: "1px solid var(--border)",
-                  color: "var(--text)",
-                  background: "var(--surface)",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 2,
                 }}
               >
-                Explore investment
-              </Link>
-              <Link
-                href="/contact?intent=project"
-                className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-lg transition-all text-sm"
-                style={{
-                  border: "1px solid var(--border)",
-                  color: "var(--text)",
-                  background: "var(--surface)",
-                }}
-              >
-                Discuss a project
-              </Link>
-            </div>
+                <span
+                  style={{
+                    fontFamily: "var(--font-display, Inter, sans-serif)",
+                    fontSize: 28,
+                    fontWeight: 500,
+                    color: "var(--text)",
+                    lineHeight: 1,
+                  }}
+                >
+                  {value}
+                </span>
+                <span className="label-mono" style={{ color: "var(--text-dim)" }}>
+                  {label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Scroll hint */}
+        {/* Scroll cue */}
         <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
           aria-hidden="true"
+          className="anim-fade-in delay-5"
+          style={{
+            position: "absolute",
+            bottom: 32,
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 6,
+            opacity: 0.35,
+          }}
         >
-          <span style={{ color: "var(--text-dim)", fontSize: "0.7rem", letterSpacing: "0.1em" }}>
-            SCROLL
-          </span>
-          <div
-            className="w-px h-8"
-            style={{ background: "linear-gradient(to bottom, var(--text-dim), transparent)" }}
-          />
+          <span className="label-mono" style={{ color: "var(--text-dim)" }}>Scroll</span>
+          <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="14" height="10" rx="7" stroke="currentColor" strokeWidth="1.2"/>
+            <rect x="7.4" y="4" width="1.2" height="3" rx="0.6" fill="currentColor"/>
+            <path d="M4 15l4 4 4-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
       </section>
 
-      {/* Operating model overview */}
+      {/* ── VALUE PROPS ───────────────────────────────────────────────── */}
+      <section className="section" aria-label="Value propositions">
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 16,
+            }}
+          >
+            {valueProps.map(({ icon, title, body }) => (
+              <div key={title} className="card card-gold">
+                <div
+                  style={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: 10,
+                    background: "var(--gold-glow)",
+                    border: "1px solid rgba(201,162,39,0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 18,
+                    marginBottom: 20,
+                    color: "var(--gold)",
+                  }}
+                  aria-hidden="true"
+                >
+                  {icon}
+                </div>
+                <h3
+                  className="display-sm"
+                  style={{ color: "var(--text)", marginBottom: 12, margin: "0 0 12px" }}
+                >
+                  {title}
+                </h3>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", margin: 0 }}>
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MOB GRID ──────────────────────────────────────────────────── */}
       <section
-        className="py-24"
-        style={{ borderTop: "1px solid var(--border)" }}
-        aria-labelledby="model-heading"
+        className="section"
+        aria-label="The 12 Art Mobs"
+        style={{ background: "var(--surface)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="container">
+          <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
             <div>
-              <p
-                className="text-xs font-semibold tracking-widest uppercase mb-4"
-                style={{ color: "var(--gold)" }}
-              >
-                How AMA works
+              <p className="label-mono" style={{ color: "var(--gold)", marginBottom: 12, margin: "0 0 12px" }}>
+                Delivery Structure
               </p>
-              <h2
-                id="model-heading"
-                className="font-bold mb-6"
-                style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.02em" }}
-              >
-                One company. Twelve specialized teams. A shared coordination layer.
+              <h2 className="display-md" style={{ color: "var(--text)", margin: 0, maxWidth: 480 }}>
+                12 specialized teams, purpose-built for every domain
               </h2>
-              <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-4">
-                AMA Solutions Corp is the public front door — the corporation that holds
-                commercial relationships, contracts, and investment conversations.
-              </p>
-              <p style={{ color: "var(--text-muted)", lineHeight: "1.8" }} className="mb-6">
-                HAMAL is the intelligence layer that coordinates across AMA, Hanzo, and Lux —
-                maintaining playbooks, shared context, and orchestration standards that equip our
-                delivery teams. The 12 Art Mob teams execute client-facing work, each with a
-                defined capability focus and 12 designed AGINT positions.
-              </p>
-              <Link
-                href="/how-it-works"
-                className="inline-flex items-center gap-2 text-sm font-semibold"
-                style={{ color: "var(--gold)" }}
+            </div>
+            <Link href="/mobs" className="btn-secondary" style={{ flexShrink: 0 }}>
+              Explore the Mobs
+            </Link>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+              gap: 12,
+            }}
+          >
+            {mobs.map(({ id, name, domain }) => (
+              <div
+                key={id}
+                className="home-mob-card"
+                style={{
+                  background: "var(--bg)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 20,
+                  padding: "20px 20px 18px",
+                  transition: "border-color 200ms ease, transform 200ms ease",
+                }}
               >
-                See the full model <ArrowRight />
+                <span className="label-mono" style={{ color: "var(--gold-dim)", display: "block", marginBottom: 8 }}>
+                  {id}
+                </span>
+                <p
+                  style={{
+                    fontFamily: "var(--font-display, Inter, sans-serif)",
+                    fontWeight: 500,
+                    fontSize: 15,
+                    color: "var(--text)",
+                    margin: "0 0 6px",
+                  }}
+                >
+                  {name}
+                </p>
+                <p className="label-mono" style={{ color: "var(--text-dim)", letterSpacing: "0.04em", textTransform: "none", fontSize: 11, fontWeight: 400, margin: 0 }}>
+                  {domain}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            style={{
+              fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+              fontSize: 12,
+              color: "var(--text-dim)",
+              marginTop: 20,
+              textAlign: "center",
+            }}
+          >
+            144 designed positions across 12 Mobs. Active deployment roster verified separately.
+          </p>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS TEASER ───────────────────────────────────────── */}
+      <section className="section" aria-label="How it works preview">
+        <div className="container">
+          <div
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "var(--radius-card)",
+              padding: "64px 48px",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 48,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <p className="label-mono" style={{ color: "var(--gold)", marginBottom: 16, margin: "0 0 16px" }}>
+                The Model
+              </p>
+              <h2 className="display-md" style={{ color: "var(--text)", margin: "0 0 20px", maxWidth: 400 }}>
+                Scope, assign, deliver — with accountability at every step
+              </h2>
+              <p className="body-mono" style={{ color: "var(--text-secondary)", marginBottom: 28 }}>
+                Clients bring a challenge. We scope the work, route it to the right Mob,
+                and deliver with human review throughout. One corporation owns the engagement.
+              </p>
+              <Link href="/how-it-works" className="btn-primary">
+                See the Full Model
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 gap-3">
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[
-                {
-                  label: "AMA Solutions Corp",
-                  desc: "Delaware C corporation. Commercial relationships, contracts, and investment vehicle.",
-                  tag: "Active",
-                  tagColor: "#22C55E",
-                },
-                {
-                  label: "HAMAL",
-                  desc: "Coordinating intelligence layer. Maintains playbooks and orchestration across the network.",
-                  tag: "Active",
-                  tagColor: "#22C55E",
-                },
-                {
-                  label: "12 Art Mob Teams",
-                  desc: "Client-facing delivery units. 144 designed AGINT positions across 12 specialized Mobs.",
-                  tag: "In development",
-                  tagColor: "var(--gold)",
-                },
-                {
-                  label: "Foundry OS",
-                  desc: "Modular operating system for agent-enabled work. Licensing is a longer-term goal.",
-                  tag: "In development",
-                  tagColor: "var(--gold)",
-                },
-              ].map((item) => (
+                { step: "01", label: "Scope the engagement" },
+                { step: "02", label: "Assign to the right Mob" },
+                { step: "03", label: "Agent-enabled execution" },
+                { step: "04", label: "Human review & delivery" },
+              ].map(({ step, label }) => (
                 <div
-                  key={item.label}
-                  className="p-4 rounded-xl"
+                  key={step}
                   style={{
-                    background: "var(--surface)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 16,
+                    padding: "14px 20px",
+                    background: "var(--bg)",
                     border: "1px solid var(--border)",
+                    borderRadius: 14,
                   }}
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="font-semibold mb-1" style={{ fontSize: "0.9375rem" }}>
-                        {item.label}
-                      </p>
-                      <p style={{ color: "var(--text-muted)", fontSize: "0.8125rem", lineHeight: "1.6" }}>
-                        {item.desc}
-                      </p>
-                    </div>
-                    <span
-                      className="shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full"
-                      style={{
-                        color: item.tagColor,
-                        border: `1px solid ${item.tagColor}`,
-                        background: `${item.tagColor}18`,
-                      }}
-                    >
-                      {item.tag}
-                    </span>
-                  </div>
+                  <span className="label-mono" style={{ color: "var(--gold)", minWidth: 24 }}>{step}</span>
+                  <span style={{ fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)", fontSize: 13, color: "var(--text)" }}>
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -254,203 +408,85 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Mobs preview */}
+      {/* ── AUDIENCE CTAs ─────────────────────────────────────────────── */}
       <section
-        className="py-24"
-        style={{ borderTop: "1px solid var(--border)", background: "var(--surface)" }}
-        aria-labelledby="mobs-heading"
+        className="section"
+        aria-label="Paths for clients, partners and investors"
+        style={{ borderTop: "1px solid var(--border)" }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <p
-                className="text-xs font-semibold tracking-widest uppercase mb-3"
-                style={{ color: "var(--gold)" }}
-              >
-                The delivery network
-              </p>
-              <h2
-                id="mobs-heading"
-                className="font-bold"
-                style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.02em" }}
-              >
-                12 Art Mob Teams
-              </h2>
-              <p className="mt-2" style={{ color: "var(--text-muted)", fontSize: "0.9375rem" }}>
-                144 designed AGINT positions. Each Mob has a distinct capability focus, district
-                character, and toolset concept.
-              </p>
-            </div>
-            <Link
-              href="/mobs"
-              className="shrink-0 inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-lg"
-              style={{ border: "1px solid var(--border)", color: "var(--text)" }}
-            >
-              Explore all Mobs <ArrowRight />
-            </Link>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <p className="label-mono" style={{ color: "var(--gold)", marginBottom: 12, margin: "0 0 12px" }}>
+              Where do you fit?
+            </p>
+            <h2 className="display-md" style={{ color: "var(--text)", margin: 0 }}>
+              Three clear paths in
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            {mobPreviews.map((mob, i) => (
-              <Link
-                href={`/mobs#mob-${mob.name.toLowerCase()}`}
-                key={mob.name}
-                className="group p-4 rounded-xl transition-all"
-                style={{
-                  background: "var(--bg)",
-                  border: "1px solid var(--border)",
-                }}
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <span
-                    className="w-5 h-5 rounded flex items-center justify-center text-xs font-bold"
-                    style={{ background: "rgba(201,162,39,0.12)", color: "var(--gold)" }}
-                  >
-                    {i + 1}
-                  </span>
-                  <span className="text-xs font-medium" style={{ color: "var(--text-dim)" }}>
-                    {mob.tagline}
-                  </span>
-                </div>
-                <p className="font-semibold text-sm mb-1" style={{ color: "var(--text)" }}>
-                  {mob.name}
-                </p>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.75rem", lineHeight: "1.5" }}>
-                  {mob.focus}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Audience paths */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--border)" }} aria-labelledby="paths-heading">
-        <div className="max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold tracking-widest uppercase mb-4 text-center"
-            style={{ color: "var(--gold)" }}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 16,
+            }}
           >
-            Who engages AMA
-          </p>
-          <h2
-            id="paths-heading"
-            className="font-bold text-center mb-12"
-            style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.02em" }}
-          >
-            Find your path
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Strategic Partners",
-                desc: "Understand AMA's architecture, capability network, and coordination model. Open a conversation about working together.",
-                cta: "Partner with AMA",
-                href: "/partner-invest#partner",
+                label: "Prospective Clients",
+                headline: "Need a team that can execute?",
+                body: "Tell us about your challenge. We'll scope the right Mob for the work.",
+                href: "/contact",
+                cta: "Start a Conversation",
               },
               {
-                title: "Investors",
-                desc: "AMA Solutions Corp is the Delaware C corporation and intended investment vehicle. Request a conversation to learn more.",
-                cta: "Explore investment",
-                href: "/partner-invest#invest",
-                note: "No securities terms or offering implied.",
+                label: "Strategic Partners",
+                headline: "Building alongside the agentic economy?",
+                body: "AMA is actively seeking aligned organizations for co-delivery and referral.",
+                href: "/partner-invest",
+                cta: "Explore Partnership",
               },
               {
-                title: "Clients",
-                desc: "Identify the Mob best suited to your challenge and contact AMA to scope a paid engagement. Human scoping and review are part of every project.",
-                cta: "Discuss a project",
-                href: "/contact?intent=project",
+                label: "Investors",
+                headline: "Want exposure to this model?",
+                body: "AMA Solutions Corp is a Delaware C-Corp. Serious investor inquiries welcome.",
+                href: "/partner-invest",
+                cta: "Learn More",
               },
-            ].map((path) => (
+            ].map(({ label, headline, body, href, cta }) => (
               <div
-                key={path.title}
-                className="flex flex-col p-6 rounded-2xl"
-                style={{
-                  background: "var(--surface)",
-                  border: "1px solid var(--border)",
-                }}
+                key={label}
+                className="card card-gold"
+                style={{ display: "flex", flexDirection: "column" }}
               >
-                <h3 className="font-bold text-lg mb-3">{path.title}</h3>
-                <p
-                  style={{ color: "var(--text-muted)", lineHeight: "1.7", fontSize: "0.9375rem" }}
-                  className="mb-4 flex-1"
+                <span className="badge badge-surface" style={{ marginBottom: 20, alignSelf: "flex-start" }}>
+                  {label}
+                </span>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-display, Inter, sans-serif)",
+                    fontSize: 20,
+                    fontWeight: 500,
+                    color: "var(--text)",
+                    margin: "0 0 12px",
+                  }}
                 >
-                  {path.desc}
+                  {headline}
+                </h3>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", margin: "0 0 24px", flex: 1 }}>
+                  {body}
                 </p>
-                {path.note && (
-                  <p className="text-xs mb-4" style={{ color: "var(--text-dim)", fontStyle: "italic" }}>
-                    {path.note}
-                  </p>
-                )}
-                <Link
-                  href={path.href}
-                  className="inline-flex items-center gap-2 text-sm font-semibold mt-auto"
-                  style={{ color: "var(--gold)" }}
-                >
-                  {path.cta} <ArrowRight />
+                <Link href={href} className="btn-secondary" style={{ alignSelf: "flex-start" }}>
+                  {cta}
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* CTA bar */}
-      <section
-        className="py-20"
-        style={{ borderTop: "1px solid var(--border)", background: "var(--surface)" }}
-        aria-labelledby="cta-heading"
-      >
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            id="cta-heading"
-            className="font-bold mb-4"
-            style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", letterSpacing: "-0.02em" }}
-          >
-            Ready to start a conversation?
-          </h2>
-          <p style={{ color: "var(--text-muted)", marginBottom: "2rem" }}>
-            Tell us what you’re building. We’ll help you find the right path.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/contact"
-              className="font-semibold px-8 py-3 rounded-lg transition-all"
-              style={{ background: "var(--gold)", color: "#000" }}
-            >
-              Get in touch
-            </Link>
-            <Link
-              href="/mobs"
-              className="font-semibold px-8 py-3 rounded-lg transition-all"
-              style={{ border: "1px solid var(--border)", color: "var(--text)" }}
-            >
-              Explore the Mobs
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
-  );
-}
-
-function ArrowRight() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M1 7h12M8 3l5 4-5 4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

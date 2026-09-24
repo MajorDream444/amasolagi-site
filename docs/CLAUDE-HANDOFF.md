@@ -7,7 +7,7 @@ You are building the public AMA Solutions website in this repository. Treat the 
 - AMA Solutions Corp is the company and public commercial front door.
 - HAMAL is the top coordinating Mob and intelligence layer connecting Hanzo, AMA, and Lux.
 - The 12 Art Mob teams are the client-facing delivery units; clients engage a relevant Mob or portion of a Mob.
-- The intended network is 144 AGInts across 12 Mobs: 12 designed positions per Mob. Do not represent the entire roster as deployed.
+- The intended network vision is 144 AGINT positions across 12 Mobs. Do not state a per-Mob count until the roster is reconciled, and do not represent the entire network as deployed.
 - Foundry OS is in development, with modularity and licensing as a longer-term goal.
 - The audience priority is strategic partners and investors, with clients also able to find an engagement path.
 - Make the campus an engaging story and navigation concept, while ensuring visitors can quickly understand the company and contact it.

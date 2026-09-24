@@ -1,30 +1,37 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { SITE_NAME } from "@/lib/metadata";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
-const siteDescription =
-  "AMA Solutions Corp — agentic venture-building and delivery. Strategic partners, investors, and clients engage AMA and our 12 Art Mob teams to turn ambitious ideas into scoped, reviewable work.";
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    default: "AMA Solutions Corp",
+    template: "%s | AMA Solutions Corp",
   },
-  description: siteDescription,
+  description:
+    "AMA Solutions Corp delivers agentic services through 12 specialized Art Mob teams — the client-facing, accountability-backed corporation for the agentic era.",
   metadataBase: new URL("https://amasolagi.com"),
   openGraph: {
     type: "website",
-    siteName: SITE_NAME,
+    siteName: "AMA Solutions Corp",
     locale: "en_US",
-    title: SITE_NAME,
-    description: siteDescription,
   },
   twitter: {
-    card: "summary",
-    title: SITE_NAME,
-    description: siteDescription,
+    card: "summary_large_image",
   },
 };
 
@@ -34,14 +41,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="bg-[#080808] text-white antialiased">
+        <Nav />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <Nav />
         <main id="main-content">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

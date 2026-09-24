@@ -1,177 +1,147 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import Link from "next/link";
-import { pageMetadata } from "@/lib/metadata";
 import ContactForm from "./ContactForm";
+import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
-    "Start a conversation with AMA Solutions Corp about a client project, strategic partnership, investment inquiry, or Foundry OS.",
+    "Start a conversation with AMA Solutions Corp — whether you're a prospective client, strategic partner, or investor.",
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
     <>
-      <div style={{ paddingTop: "80px" }} />
-
-      {/* Header */}
+      {/* ── HERO ────────────────────────────────────────────────────── */}
       <section
-        className="py-16 md:py-20"
-        style={{ borderBottom: "1px solid var(--border)" }}
-        aria-labelledby="contact-heading"
+        style={{
+          paddingTop: 140,
+          paddingBottom: 80,
+          borderBottom: "1px solid var(--border)",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold)" }}
-          >
-            Start a conversation
+        <div className="grid-overlay" style={{ opacity: 0.1 }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <p className="label-mono" style={{ color: "var(--gold)", margin: "0 0 20px" }}>
+            Get in Touch
           </p>
-          <h1
-            id="contact-heading"
-            className="font-bold mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em" }}
-          >
-            Get in touch with AMA
+          <h1 className="display-lg" style={{ color: "var(--text)", maxWidth: 560, margin: "0 0 24px" }}>
+            Start a conversation
           </h1>
-          <p
-            className="max-w-xl text-lg"
-            style={{ color: "var(--text-muted)", lineHeight: "1.8" }}
-          >
-            Every conversation at AMA starts with a human scoping call. Tell us what you’re
-            working on and where you see the fit.
+          <p className="body-mono" style={{ color: "var(--text-secondary)", maxWidth: 480, margin: 0 }}>
+            Whether you have a delivery challenge, partnership interest, or investor inquiry —
+            tell us what you&apos;re working on and we&apos;ll route it to the right conversation.
           </p>
         </div>
       </section>
 
-      {/* Main content */}
-      <section className="py-16" aria-label="Contact content">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Left — form */}
+      {/* ── FORM + CONTEXT ──────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "flex-start" }}>
+            {/* Form */}
             <div>
-              <h2 className="sr-only">Contact form</h2>
-              <Suspense fallback={
-                <div style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>
-                  Loading form…
-                </div>
-              }>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      height: 400,
+                      background: "var(--surface)",
+                      border: "1px solid var(--border)",
+                      borderRadius: "var(--radius-card)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span className="label-mono" style={{ color: "var(--text-dim)" }}>Loading…</span>
+                  </div>
+                }
+              >
                 <ContactForm />
               </Suspense>
             </div>
 
-            {/* Right — context */}
-            <div className="flex flex-col gap-8">
-              {/* What to expect */}
+            {/* Context */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
               <div>
-                <h2 className="font-bold text-xl mb-4" style={{ letterSpacing: "-0.01em" }}>
-                  What to expect
+                <div className="gold-line" style={{ marginBottom: 20 }} />
+                <h2 style={{ fontFamily: "var(--font-display, Inter, sans-serif)", fontSize: 22, fontWeight: 500, color: "var(--text)", margin: "0 0 16px" }}>
+                  Who reaches out
                 </h2>
-                <div className="flex flex-col gap-3">
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
-                    {
-                      step: "01",
-                      label: "You reach out",
-                      desc: "Fill in the form with as much context as you'd like. The more specific, the more productive the first call.",
-                    },
-                    {
-                      step: "02",
-                      label: "Human review",
-                      desc: "A person on the AMA side reviews your inquiry and determines the right next step.",
-                    },
-                    {
-                      step: "03",
-                      label: "Scoping conversation",
-                      desc: "If there's a fit, we'll set up a call to understand your situation and what kind of engagement makes sense.",
-                    },
-                    {
-                      step: "04",
-                      label: "Proposal or referral",
-                      desc: "We'll either scope a proposal or point you to a better-fit resource — whichever is most useful.",
-                    },
-                  ].map((s) => (
+                    { type: "Clients", desc: "Organizations with a delivery challenge for one or more Mobs" },
+                    { type: "Partners", desc: "Agencies, platforms, or vendors for co-delivery or referral" },
+                    { type: "Investors", desc: "Early-stage investors aligned with the agentic services thesis" },
+                  ].map(({ type, desc }) => (
                     <div
-                      key={s.step}
-                      className="flex gap-4 p-4 rounded-xl"
-                      style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+                      key={type}
+                      style={{
+                        padding: "16px 20px",
+                        background: "var(--surface)",
+                        border: "1px solid var(--border)",
+                        borderRadius: 14,
+                      }}
                     >
-                      <span
-                        className="text-xs font-black shrink-0 mt-0.5"
-                        style={{ color: "var(--gold)" }}
-                      >
-                        {s.step}
-                      </span>
-                      <div>
-                        <p className="font-semibold text-sm mb-1">{s.label}</p>
-                        <p style={{ color: "var(--text-muted)", fontSize: "0.8125rem", lineHeight: "1.5" }}>
-                          {s.desc}
-                        </p>
-                      </div>
+                      <p className="label-mono" style={{ color: "var(--gold)", margin: "0 0 4px" }}>{type}</p>
+                      <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
+                        {desc}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Path links */}
-              <div>
-                <h2
-                  className="text-xs font-semibold tracking-widest uppercase mb-4"
-                  style={{ color: "var(--text-dim)" }}
-                >
-                  Before you reach out
-                </h2>
-                <div className="flex flex-col gap-2">
-                  {[
-                    {
-                      label: "Read How It Works",
-                      desc: "Understand AMA's operating model and what the Mob network does.",
-                      href: "/how-it-works",
-                    },
-                    {
-                      label: "Explore the 12 Mobs",
-                      desc: "Find the team best aligned with your challenge.",
-                      href: "/mobs",
-                    },
-                    {
-                      label: "Partner / Invest",
-                      desc: "For strategic partner or investor conversations.",
-                      href: "/partner-invest",
-                    },
-                  ].map((l) => (
-                    <Link
-                      key={l.href}
-                      href={l.href}
-                      className="flex items-start gap-3 p-4 rounded-xl"
-                      style={{ border: "1px solid var(--border)" }}
-                    >
-                      <span style={{ color: "var(--gold)", flexShrink: 0, marginTop: "2px" }}>›</span>
-                      <div>
-                        <p className="font-semibold text-sm">{l.label}</p>
-                        <p style={{ color: "var(--text-muted)", fontSize: "0.75rem", lineHeight: "1.5" }}>
-                          {l.desc}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+              <div
+                style={{
+                  padding: "20px 24px",
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 16,
+                }}
+              >
+                <p className="label-mono" style={{ color: "var(--gold)", margin: "0 0 12px" }}>
+                  Email AMA Solutions
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: "0 0 8px" }}>
+                  General inquiries: {" "}
+                  <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    info@amasolagi.com
+                  </a>
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
+                  Direct contact: {" "}
+                  <a href="mailto:major@amasolagi.com" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    major@amasolagi.com
+                  </a>
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: "8px 0 0" }}>
+                  Phone: {" "}
+                  <a href="tel:+61450461470" style={{ color: "var(--gold)", textDecoration: "none" }}>
+                    +61 450 461 470
+                  </a>
+                </p>
               </div>
 
-              {/* Email placeholder notice */}
               <div
-                className="p-4 rounded-xl text-xs"
                 style={{
+                  padding: "20px 24px",
+                  background: "var(--surface)",
                   border: "1px solid var(--border)",
-                  color: "var(--text-dim)",
-                  lineHeight: "1.7",
+                  borderRadius: 16,
                 }}
-                role="note"
               >
-                <strong style={{ color: "var(--text-muted)" }}>Email not yet active.</strong>{" "}
-                info@amasolagi.com is a candidate address. Email delivery, DNS, and receiving
-                setup are pending. Do not send sensitive information to this address until
-                confirmed active. The form above will be the primary route once activated.
+                <p className="label-mono" style={{ color: "var(--text-dim)", margin: "0 0 8px" }}>
+                  Response
+                </p>
+                <p className="body-mono" style={{ color: "var(--text-secondary)", fontSize: 13, margin: 0 }}>
+                  We read every message. Response times vary — we&apos;ll reach out when there&apos;s a
+                  genuine path forward. No automated replies.
+                </p>
               </div>
             </div>
           </div>
