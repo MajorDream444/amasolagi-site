@@ -24,13 +24,13 @@ The personal website at [majordreamwilliams.com](https://majordreamwilliams.com)
 - A founder narrative that spans multiple ventures
 - Links to AMA Solutions, MAIM, and other initiatives
 
-Personal website: [majordreamwilliams.com](https://majordreamwilliams.com). The domain is active; site deployment and DNS routing are not yet verified.
+The domain is marked active in the domain dashboard screenshot. Confirm hosting and DNS routing before linking visitors there.
 
 ## Major AI Mindset (MAIM)
 
 MAIM is the education-focused platform at [majoraimindset.com](https://majoraimindset.com) for helping people build confidence, literacy, and practical skill with AI. Keep its curriculum, learning resources, community, and educational calls to action on the MAIM site.
 
-MAIM’s domain is [majoraimindset.com](https://majoraimindset.com). The domain is active; site deployment and DNS routing are not yet verified. The AMA site may identify MAIM as a related initiative in a small “Ecosystem” or “Related work” area if useful, but should route education visitors to MAIM rather than reproduce its content.
+The domain is marked active in the domain dashboard screenshot. Confirm hosting and DNS routing before linking visitors there. The AMA site may identify MAIM as a related initiative in a small “Ecosystem” or “Related work” area if useful, but should route education visitors to MAIM rather than reproduce its content.
 
 ## Founder presence on AMA
 
@@ -38,7 +38,7 @@ A short founder section on AMA is appropriate when it helps visitors understand 
 
 - Major’s role at AMA
 - The relevant connection between his experience and AMA’s purpose
-- A link to the personal site once its domain is confirmed
+- A link to the personal site after its hosting and DNS are verified
 
 Do not place the full personal biography, personal doctrine, book catalog, MAIM curriculum, or unrelated founder projects on the AMA website.
 
@@ -58,5 +58,5 @@ If not, route it to Major’s personal website or MAIM.
 - **HAMAL:** coordinating Mob and intelligence layer supporting AMA’s delivery architecture.
 - **Art Mob teams:** client-facing delivery units.
 - **Foundry OS:** operating system in development.
-- **Major Dream Williams personal site:** founder’s broader story, doctrine, books, and personal work; URL pending.
-- **MAIM:** AI education and learning platform; direct its learners to its own site.
+- **Major Dream Williams personal site:** founder’s broader story, doctrine, books, and personal work at majordreamwilliams.com; hosting/DNS verification pending.
+- **MAIM:** AI education and learning platform at majoraimindset.com; hosting/DNS verification pending.
