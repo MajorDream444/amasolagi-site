@@ -78,6 +78,22 @@ export default function FounderPage() {
                 >
                   Personal Site ↗
                 </a>
+                <a
+                  href="https://www.f6s.com/member/major-dream?follow=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Follow Major Dream Williams on F6S"
+                  aria-label="Follow Major Dream Williams on F6S"
+                  style={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <img
+                    src="https://www.f6s.com/images/f6s-follow-secondary.png"
+                    width="78"
+                    height="22"
+                    alt="Follow Major Dream Williams on F6S"
+                    style={{ width: 78, height: 22, padding: 0, margin: 0, border: 0 }}
+                  />
+                </a>
               </div>
             </div>
 
