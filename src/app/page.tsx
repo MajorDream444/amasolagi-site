@@ -61,7 +61,11 @@ export default function HomePage() {
           "contactType": "customer service",
           "url": "https://amasolagi.com/contact"
         },
-        "sameAs": []
+        "sameAs": [
+          "https://www.instagram.com/amasolagi/",
+          "https://www.linkedin.com/in/majordream/",
+          "https://x.com/artmobagi"
+        ]
       },
       {
         "@type": "WebSite",
@@ -109,6 +113,52 @@ export default function HomePage() {
             gap: 32,
           }}
         >
+          {/* Social profiles */}
+          <nav
+            aria-label="AMA Solutions social profiles"
+            className="anim-fade-in"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}
+          >
+            <a
+              href="https://www.instagram.com/amasolagi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AMA Solutions on Instagram"
+              title="Instagram"
+              style={{ width: 40, height: 40, display: "inline-flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border-light)", borderRadius: 999, color: "var(--gold)", background: "rgba(255,255,255,0.025)" }}
+            >
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/majordream/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Major Dream Williams on LinkedIn"
+              title="LinkedIn"
+              style={{ width: 40, height: 40, display: "inline-flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border-light)", borderRadius: 999, color: "var(--gold)", background: "rgba(255,255,255,0.025)" }}
+            >
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M5.2 8.6H2.3V21h2.9V8.6ZM3.75 2A1.75 1.75 0 1 0 3.75 5.5 1.75 1.75 0 0 0 3.75 2ZM21.7 13.9c0-3.75-2-5.5-4.65-5.5a4.02 4.02 0 0 0-3.62 1.99V8.6h-2.9V21h2.9v-6.14c0-1.62.31-3.19 2.32-3.19 1.98 0 2 1.85 2 3.3V21h2.9l.05-7.1Z" />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/artmobagi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AMA Solutions on X"
+              title="X"
+              style={{ width: 40, height: 40, display: "inline-flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border-light)", borderRadius: 999, color: "var(--gold)", background: "rgba(255,255,255,0.025)" }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.12L5.8 22H2.65l7.25-8.3L2.2 2h6.42l4.43 6.57L18.9 2Zm-1.1 18h1.73L7.67 3.9H5.81L17.8 20Z" />
+              </svg>
+            </a>
+          </nav>
+
           {/* Status badge */}
           <div className="badge badge-gold anim-fade-in">
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)", display: "inline-block" }} />
