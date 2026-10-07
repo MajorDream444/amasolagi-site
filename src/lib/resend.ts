@@ -13,7 +13,7 @@ function getApiKey() {
   return key;
 }
 
-async function resendRequest(path: string, init: RequestInit): Promise<ResendResult> {
+async function resendRequest(path: string, init: RequestInit, allowNotFound = false): Promise<ResendResult> {
   const response = await fetch(`${RESEND_API_URL}${path}`, {
     ...init,
     headers: {
@@ -24,6 +24,7 @@ async function resendRequest(path: string, init: RequestInit): Promise<ResendRes
     cache: "no-store",
   });
   const result = (await response.json().catch(() => ({}))) as ResendResult;
+  if (allowNotFound && response.status === 404) return {};
   if (!response.ok) throw new Error(result.error?.message || "Email request failed");
   return result;
 }
@@ -79,11 +80,13 @@ export async function subscribeMarketing(input: {
   if (!topicId || !eventName) throw new Error("Marketing signup is not configured");
 
   const contactPath = `/contacts/${encodeURIComponent(input.email)}`;
-  const contactResult = await resendRequest(contactPath, { method: "GET" });
+  const contactResult = await resendRequest(contactPath, { method: "GET" }, true);
   const contact = (contactResult.data && !Array.isArray(contactResult.data)
     ? contactResult.data
     : contactResult) as Record<string, unknown>;
-  const topicsResult = await resendRequest(`${contactPath}/topics`, { method: "GET" });
+  const topicsResult = contact.id
+    ? await resendRequest(`${contactPath}/topics`, { method: "GET" })
+    : {};
   const topics = Array.isArray(topicsResult.data)
     ? topicsResult.data
     : Array.isArray(topicsResult.topics)
