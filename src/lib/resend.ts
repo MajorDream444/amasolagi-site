@@ -3,7 +3,8 @@ const RESEND_API_URL = "https://api.resend.com";
 type ResendResult = {
   id?: string;
   error?: { message?: string };
-  data?: Record<string, unknown>;
+  data?: Record<string, unknown> | Array<Record<string, unknown>>;
+  topics?: Array<Record<string, unknown>>;
 };
 
 function getApiKey() {
@@ -77,44 +78,49 @@ export async function subscribeMarketing(input: {
   const eventName = process.env.RESEND_MARKETING_EVENT;
   if (!topicId || !eventName) throw new Error("Marketing signup is not configured");
 
-  const listed = await resendRequest(
-    `/contacts?email=${encodeURIComponent(input.email)}`,
-    { method: "GET" },
-  );
-  const contact = (listed.data || {}) as Record<string, unknown>;
-  const existingTopics = Array.isArray(contact.topics)
-    ? (contact.topics as Array<Record<string, unknown>>)
-    : [];
-  const wasOptedIn = existingTopics.some(
+  const contactPath = `/contacts/${encodeURIComponent(input.email)}`;
+  const contactResult = await resendRequest(contactPath, { method: "GET" });
+  const contact = (contactResult.data && !Array.isArray(contactResult.data)
+    ? contactResult.data
+    : contactResult) as Record<string, unknown>;
+  const topicsResult = await resendRequest(`${contactPath}/topics`, { method: "GET" });
+  const topics = Array.isArray(topicsResult.data)
+    ? topicsResult.data
+    : Array.isArray(topicsResult.topics)
+      ? topicsResult.topics
+      : [];
+  const wasOptedIn = topics.some(
     (topic) => topic.id === topicId && topic.subscription === "opt_in",
   );
 
-  if (contact.id) {
-    await resendRequest(`/contacts/${encodeURIComponent(input.email)}`, {
+  if (!contact.id) {
+    await resendRequest("/contacts", json({
+      email: input.email,
+      first_name: input.firstName || undefined,
+      unsubscribed: false,
+    }));
+  } else {
+    await resendRequest(contactPath, {
       method: "PATCH",
       body: JSON.stringify({
         first_name: input.firstName || undefined,
         unsubscribed: false,
       }),
     });
-    await resendRequest(`/contacts/${encodeURIComponent(input.email)}/topics`, json({
-      topics: [{ id: topicId, subscription: "opt_in" }],
-    }));
-  } else {
-    await resendRequest("/contacts", json({
-      email: input.email,
-      first_name: input.firstName || undefined,
-      unsubscribed: false,
-      topics: [{ id: topicId, subscription: "opt_in" }],
-    }));
   }
 
+  await resendRequest(`${contactPath}/topics`, {
+    method: "PATCH",
+    body: JSON.stringify({
+      topics: [{ id: topicId, subscription: "opt_in" }],
+    }),
+  });
+
   if (!wasOptedIn) {
-    await resendRequest("/emails/events", json({
+    await resendRequest("/events/send", json({
       event: eventName,
       email: input.email,
-      created_at: input.consentAt,
-      properties: {
+      payload: {
         first_name: input.firstName || "",
         source: input.source,
         consent_at: input.consentAt,
