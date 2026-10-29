@@ -13,6 +13,7 @@ This repository is the canonical home for website code, approved website copy, d
 3. [Claude handoff](docs/CLAUDE-HANDOFF.md)
 4. [Cowork setup and first build prompt](docs/COWORK-STARTER.md)
 5. [Persistent Cowork project instructions](docs/COWORK-PROJECT-INSTRUCTIONS.md)
+6. [AMA corporate brand system handoff](docs/AMA-SOLUTIONS-CORPORATE-BRAND-HANDOFF.md)
 
 ## Company and product story
 
