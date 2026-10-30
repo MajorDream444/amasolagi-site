@@ -25,7 +25,7 @@ export default function PrivacyPage() {
   return <section className="section" style={{ paddingTop: 140 }}><div className="container" style={{ maxWidth: 860 }}>
     <p className="label-mono" style={{ color: "var(--gold)" }}>AMA Solutions Corporation · Privacy</p>
     <h1 className="display-lg" style={{ margin: "20px 0" }}>Privacy notice</h1>
-    <p className="body-mono" style={{ color: "var(--text-secondary)" }}><strong>Review draft — not yet approved for paid checkout.</strong> This expands the website's existing inquiry/opt-in notice to describe proposed purchases and client delivery. Prepared October 30, 2026; effective date pending approval.</p>
+    <p className="body-mono" style={{ color: "var(--text-secondary)" }}><strong>Review draft — not yet approved for paid checkout.</strong> This expands the website&apos;s existing inquiry/opt-in notice to describe proposed purchases and client delivery. Prepared October 30, 2026; effective date pending approval.</p>
     {sections.map(([heading, copy]) => <section key={heading} style={{ marginTop: 32 }}><h2 className="display-sm" style={{ marginBottom: 12 }}>{heading}</h2><p className="body-mono" style={{ color: "var(--text-secondary)" }}>{copy}</p></section>)}
     <p className="body-mono" style={{ marginTop: 40 }}>Questions or privacy requests: <a href="mailto:info@amasolagi.com" style={{ color: "var(--gold)" }}>info@amasolagi.com</a>. Also see <Link href="/terms" style={{ color: "var(--gold)" }}>terms</Link>, <Link href="/support" style={{ color: "var(--gold)" }}>support</Link> and <Link href="/contact" style={{ color: "var(--gold)" }}>contact</Link>.</p>
   </div></section>;
