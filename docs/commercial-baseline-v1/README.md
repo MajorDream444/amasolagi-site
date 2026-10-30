@@ -1,0 +1,4 @@
+# AMA final commercial baseline v1.0
+Scope freeze dated 30 October 2026. Read 01 for positioning/offers, 02 for engineering/context, 03 for audit and decisions, and 04 for Claude Code handoff. catalog.v1.json/csv carry the same 23 existing records as v002 with normalized intake/outcome/metadata fields and unchanged prices. All live sale flags remain false pending configuration/release checks. No new products or fixed-price implementation package.
+
+05 contains hypothetical use cases; 06 preserves the supplied design status. Presentation is an investor/discussion overview with evidence boundaries, not an investment solicitation or claim of traction. Build artifacts and full supplied draft brand assets are packaged separately for handoff. Runtime application code and provider integrations were not executed in this documentation task.

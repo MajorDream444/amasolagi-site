@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AMA scoped record metadata v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "record_type",
+    "schema_version",
+    "source_system",
+    "created_at_utc",
+    "sensitivity",
+    "review_status"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenant_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workspace_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "engagement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rights_basis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "purpose": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "supersedes_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updated_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "reviewed_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "retention_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "record_type": {
+      "enum": [
+        "inquiry",
+        "contact",
+        "order",
+        "subscription",
+        "workspace",
+        "source",
+        "evidence",
+        "decision",
+        "job",
+        "artifact",
+        "review",
+        "delivery",
+        "booking",
+        "event"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "source_system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sensitivity": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "pending",
+        "approved",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "need": {
+          "enum": [
+            "understand",
+            "explain",
+            "plan",
+            "choose",
+            "team-knowledge",
+            "ongoing-support",
+            "unknown"
+          ]
+        },
+        "constraint_domain": {
+          "enum": [
+            "reach",
+            "acquire",
+            "convert",
+            "expand",
+            "deliver",
+            "quality",
+            "capacity",
+            "unknown"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "brief",
+            "deep-dive",
+            "critique",
+            "debate"
+          ]
+        },
+        "industry": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "lifecycle_stage": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "enum": [
+              "source",
+              "evidence",
+              "decision",
+              "job",
+              "artifact",
+              "review",
+              "delivery"
+            ]
+          }
+        },
+        "required": [
+          "record_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "tenant_id",
+          "workspace_id"
+        ],
+        "properties": {
+          "tenant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "workspace_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

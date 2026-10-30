@@ -1,3 +1,7 @@
+# Commercial scope update — 30 October 2026
+
+For commerce, current catalog, advisory-agent behavior, pricing and implementation requirements, read [commercial-baseline-v1/04-CLAUDE-CODE-HANDOVER.md](commercial-baseline-v1/04-CLAUDE-CODE-HANDOVER.md) and the linked packet first. The owner authorizes commerce implementation in an isolated reviewable branch; the older blanket prohibition on payment-flow development below is superseded only for that implementation scope. Live activation, secret handling, production deployment and investor terms remain separately bounded. Preserve existing client/corporate brand boundaries. The packet adds no new offers.
+
 # Claude Code / Claude Cowork Handoff
 
 You are building the public AMA Solutions website in this repository. Treat the repository as the canonical source of truth for website decisions and implementation. Read this file, `README.md`, `docs/PROJECT-BRIEF.md`, `docs/SITE-MAP.md`, `docs/MOB-TOOL-CATALOG.md`, `docs/CAMPUS-ARCHITECTURE.md`, `docs/BRAND-BOUNDARIES.md`, and `docs/source-reference/FOUNDER-ORIGIN-ATHLETE-LEGACY.md` before changing code or copy.
