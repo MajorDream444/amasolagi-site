@@ -41,3 +41,8 @@ Do not imply that all 144 AGInts, Mobs, workflows, products, or integrations are
 ## Current implementation status
 
 Project documentation is initialized. Use [the Cowork starter](docs/COWORK-STARTER.md) to begin implementation; the framework is intentionally left for the builder to select after inspecting the repository.
+
+
+## Final commercial baseline (30 October 2026)
+
+Start with [the frozen catalog and philosophy](docs/commercial-baseline-v1/01-AMA-PHILOSOPHY-AND-OFFERS.md), [engineering and context specification](docs/commercial-baseline-v1/02-ENGINEERING-AND-MEMORY-SPEC.md), and [Claude Code handover](docs/commercial-baseline-v1/04-CLAUDE-CODE-HANDOVER.md). These supersede older commercial pricing/catalog ambiguity for this scope. Preserve the existing corporation/brand boundaries and actual backend binding. No live activation is implied. The canonical working prices are $350 for the 60-minute AI Choice Session and $1,250 for the 90-minute workflow workshop. No additional offers.
